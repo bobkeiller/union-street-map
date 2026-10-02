@@ -17,11 +17,15 @@ reuse, or delete an existing `unit_id` as part of a routine information update.
 5. Record `verification_date` as `YYYY-MM-DD`.
 6. Add a concise `source_note` without including confidential information.
 7. Save as UTF-8 CSV, keeping the existing column headings.
-8. Run `node scripts/validate-data.mjs`.
-9. Preview the site locally and inspect the changed unit, status totals, and
-   details panel.
-10. Commit the update on a branch, open a pull request, and have a second person
-    review it before merging to `main`.
+8. Double-click `Publish Unit Updates.command` in Finder.
+9. Review the validation result and the displayed changes.
+10. Enter a concise description and confirm publication.
+11. After GitHub Pages deploys, inspect the changed unit, status totals, and
+    details panel on the live site.
+
+The publishing command commits and pushes only `data/union-street-units.csv`.
+Other uncommitted project work is not included. For a formal second-person
+approval process, use a branch and pull request instead of the direct command.
 
 GitHub Pages republishes automatically after the change reaches `main`. If an
 incorrect change is published, revert the relevant GitHub commit.

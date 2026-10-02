@@ -17,10 +17,28 @@ Then open <http://localhost:8000>.
 ## Update property information
 
 Edit `data/union-street-units.csv`, keeping each existing `unit_id` unchanged.
-Before publishing, run:
+On a Mac, double-click `Publish Unit Updates.command`. It will:
+
+1. Validate every CSV row.
+2. Check that GitHub does not contain newer work.
+3. Show the proposed changes.
+4. Ask for an update description and confirmation.
+5. Commit only the CSV file and push it to GitHub.
+
+GitHub Pages then republishes the live site automatically. The command will
+stop without publishing if validation or safety checks fail.
+
+To validate manually without publishing, run:
 
 ```sh
 node scripts/validate-data.mjs
+```
+
+To exercise the publishing checks without committing or pushing, first make a
+CSV change and run:
+
+```sh
+./Publish\ Unit\ Updates.command --dry-run
 ```
 
 See `docs/DATA-MANAGEMENT.md` for the full editing and approval process.
@@ -46,6 +64,7 @@ a pull request is opened.
 - `data/union-street-units.csv` — editable property register.
 - `union-street-*.js` — map geometry and linked mapping records.
 - `scripts/validate-data.mjs` — property-register validation.
+- `Publish Unit Updates.command` — guided validation and GitHub publication.
 - `docs/DATA-MANAGEMENT.md` — maintenance procedure and field definitions.
 
 The MapLibre library and the map background are loaded from third-party web
