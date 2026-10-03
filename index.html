@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>Union Street building map prototype</title>
+  <title>Union Street Retail Units</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.css">
   <style>
@@ -21,6 +21,7 @@
     .layout{position:relative;min-height:0}
     #map{position:absolute;inset:0;background:#dfe6e1}
     .panel{position:absolute;z-index:4;left:12px;right:12px;bottom:12px;max-height:44%;overflow:auto;padding:14px;background:color-mix(in srgb,var(--panel) 96%,transparent);border:1px solid #cbd5cf;border-radius:14px;box-shadow:0 8px 30px #17221d2a}
+    .panel[hidden]{display:none}
     .panel h2{margin:0 34px 5px 0;font-size:1.05rem}
     .panel p{margin:4px 0;color:var(--muted);font-size:.85rem;line-height:1.35}
     .panel .property-address{margin:0 34px 10px 0;color:var(--muted);font-size:.9rem}
@@ -43,19 +44,17 @@
     .legend strong{display:block;margin-bottom:6px;font-size:.8rem}
     .legend span{display:flex;align-items:center;gap:6px;margin:4px 0}
     .legend i{width:12px;height:12px;border-radius:3px;border:1px solid #0002}
-    .prototype-note{position:absolute;z-index:4;top:12px;right:12px;max-width:190px;padding:7px 9px;border-radius:9px;background:#263c32e8;color:#fff;font-size:.7rem;line-height:1.3;text-align:right}
     .maplibregl-ctrl .view-toggle{min-width:36px;height:36px;padding:0 8px;border:0;background:#fff;color:#263c32;font:700 12px/36px Inter,ui-sans-serif,system-ui,sans-serif;cursor:pointer}
     .maplibregl-ctrl .view-toggle:hover{background:#eef2ef}
     .map-error{position:absolute;z-index:6;inset:20px;display:none;place-items:center;padding:24px;background:#fff;border:1px solid var(--line);border-radius:14px;text-align:center}
     .maplibregl-ctrl-attrib{font-size:10px}
-    @media(min-width:760px){.topbar{padding:15px 22px}.panel{left:auto;right:18px;bottom:18px;width:340px;max-height:58%;padding:17px}.legend{top:18px;left:18px}.prototype-note{top:18px;right:18px;max-width:230px}.maplibregl-ctrl-bottom-right{right:0;bottom:0}}
+    @media(min-width:760px){.topbar{padding:15px 22px}.panel{left:auto;right:18px;bottom:18px;width:340px;max-height:58%;padding:17px}.legend{top:18px;left:18px}.maplibregl-ctrl-bottom-right{right:0;bottom:0}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
   <header class="topbar">
-    <h1>Union Street building map</h1>
-    <p>Experimental route: the west end of Union Street to the end of Castle Street, including the Castlegate. Select a coloured building to inspect it.</p>
+    <h1>Union Street Retail Units</h1>
     <div class="status-tools">
       <label for="status-filter">Highlight status</label>
       <select id="status-filter">
@@ -84,13 +83,7 @@
       <span><i style="background:var(--to-let)"></i>Occupied: To Let</span>
       <span><i style="background:#bcc5bf"></i>Context building</span>
     </div>
-    <div class="prototype-note" id="prototype-note">Real OSM footprints · loading property register…</div>
-    <section class="panel" id="details" aria-live="polite">
-      <button class="close" id="close-details" type="button" aria-label="Close building details">×</button>
-      <h2>Choose a building</h2>
-      <p>Coloured footprints represent buildings provisionally identified as fronting Union Street, Castlegate or Castle Street.</p>
-      <p>Where one footprint contains several shops, the future panel can list every linked unit.</p>
-    </section>
+    <section class="panel" id="details" aria-live="polite" hidden></section>
     <div class="map-error" id="map-error"><div><h2>Map could not be loaded</h2><p>This prototype needs an internet connection for the map library and background tiles. Its building overlay is stored locally.</p></div></div>
   </main>
   <script src="https://unpkg.com/maplibre-gl@5/dist/maplibre-gl.js"></script>
@@ -106,7 +99,6 @@
     (async()=>{
       const details=document.getElementById('details');
       const error=document.getElementById('map-error');
-      const prototypeNote=document.getElementById('prototype-note');
       const statusFilter=document.getElementById('status-filter');
       const statusTotals=document.getElementById('status-totals');
       const addressRecords=globalThis.UNION_STREET_CENTRAL_ADDRESSES||{};
@@ -203,10 +195,7 @@
       ]);
       const context3dBuildings=globalThis.UNION_STREET_CENTRAL_BUILDINGS.features.filter(feature=>context3dBuildingIds.has(feature.properties.buildingId));
       const loweredContextBuildingIds=new Set(['osm-way-404933589','osm-way-1215644296']);
-      const csvLoadResult=await loadUnitRegister(countedUnits);
-      prototypeNote.textContent=csvLoadResult.loaded
-        ?`CSV property register · ${csvLoadResult.matched} units matched${csvLoadResult.issues?` · ${csvLoadResult.issues} register issues`:''}`
-        :'Built-in property data · serve this folder over HTTP to load the CSV register';
+      await loadUnitRegister(countedUnits);
       const heightPilotUnits={type:'FeatureCollection',features:[...context3dBuildings,...countedUnits].map(feature=>({
         ...feature,
         properties:{...feature.properties,blockKind:feature.properties.frontageId?'frontage':'building',baseHeight:0,unitHeight:loweredContextBuildingIds.has(feature.properties.buildingId)&&!feature.properties.frontageId?7.9:8,heightSource:'Prototype frontage-block height'}
@@ -435,7 +424,6 @@
       map.on('mouseenter','height-pilot-edges',()=>{map.getCanvas().style.cursor='pointer'});
       map.on('mouseleave','height-pilot-edges',()=>{map.getCanvas().style.cursor=''});
       map.on('error',event=>{if(!map.loaded()&&event.error)error.style.display='grid'});
-      document.getElementById('close-details').addEventListener('click',()=>clearSelection(true));
       async function loadUnitRegister(features){
         try{
           const response=await fetch('data/union-street-units.csv',{cache:'no-store'});
