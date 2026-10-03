@@ -1,6 +1,5 @@
 ﻿unit_id,parent_building_id,osm_id,address,occupant,status,rateable_value,area_sq_ft,annual_rates,annual_rent,arr_per_sq_ft,uprn,verified,verification_date,source_note
 osm-way-1053169095,,way/1053169095,133-141 Union Street,Nationwide,occupied,,,,,,,FALSE,,OpenStreetMap snapshot · 18 September 2026
-osm-way-1207005729,,way/1207005729,,Green Fountain,occupied-to-let,,,,,,,FALSE,,OpenStreetMap east extension snapshot · 18 September 2026
 osm-way-316663039,,way/316663039,1 Union Terrace,Chaophrya,occupied,,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026
 osm-way-316663042,,way/316663042,148 Union Street,Vacant,available,,,,,,,FALSE,,Was Cleavin Barber
 osm-way-404925607,,way/404925607,208 Union Street,Starbucks,occupied,,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026
