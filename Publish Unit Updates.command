@@ -5,6 +5,10 @@
 
 set -u
 
+# Never open Git's interactive pager. Finder-launched Terminal windows can
+# otherwise appear to stop before the publishing questions are displayed.
+export GIT_PAGER=cat
+
 PROJECT_DIR="${0:A:h}"
 DATA_FILE="data/union-street-units.csv"
 DEFAULT_MESSAGE="Update property register $(date '+%Y-%m-%d %H:%M')"
@@ -80,8 +84,8 @@ fi
 
 echo
 echo "3. Changes ready to publish:"
-git diff --stat -- "$DATA_FILE"
-git diff --color=always -- "$DATA_FILE"
+git --no-pager diff --stat -- "$DATA_FILE"
+git --no-pager diff --color=always -- "$DATA_FILE"
 
 if [[ "${1:-}" == "--dry-run" ]]; then
   echo
