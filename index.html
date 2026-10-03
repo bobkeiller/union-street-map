@@ -73,15 +73,14 @@
   </header>
   <main class="layout">
     <div id="map" role="application" aria-label="Interactive building map of Union Street, Castlegate and Castle Street"></div>
-    <div class="legend" aria-label="Map key">
-      <strong>Example status</strong>
+    <div class="legend" aria-label="Unit status key">
+      <strong>Unit Status</strong>
       <span><i style="background:var(--occupied)"></i>Occupied</span>
       <span><i style="background:var(--filled)"></i>Occupied: Filled</span>
+      <span><i style="background:var(--to-let)"></i>Occupied: To Let</span>
       <span><i style="background:var(--available)"></i>Vacant: To Let</span>
       <span><i style="background:var(--not-market)"></i>Vacant: Not on Market</span>
       <span><i style="background:var(--being)"></i>Vacant: Being Filled</span>
-      <span><i style="background:var(--to-let)"></i>Occupied: To Let</span>
-      <span><i style="background:#bcc5bf"></i>Context building</span>
     </div>
     <section class="panel" id="details" aria-live="polite" hidden></section>
     <div class="map-error" id="map-error"><div><h2>Map could not be loaded</h2><p>This prototype needs an internet connection for the map library and background tiles. Its building overlay is stored locally.</p></div></div>
