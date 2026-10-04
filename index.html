@@ -319,18 +319,10 @@
         const clicked=event.features&&event.features[0]&&event.features[0].properties;
         if(!clicked)return;
         const p=frontageFeatures.find(feature=>feature.properties.frontageId===clicked.frontageId)?.properties||clicked;
-        const parent=globalThis.UNION_STREET_CENTRAL_BUILDINGS.features.find(feature=>feature.properties.buildingId===p.parentBuildingId)?.properties||{};
         const record=addressRecords[p.parentBuildingId];
         const linkedUnit=findLinkedUnit(record,p);
-        const relatedOsm=findRelatedOsm(p.parentBuildingId,p,record);
         selectUnit(p.frontageId,'frontage');
-        renderPropertyCard({...linkedUnit,...p},{
-          unitId:p.frontageId,
-          unitOsmId:relatedOsm?.osmId||'',
-          parentId:p.parentBuildingId,
-          parentOsmId:parent.osmId||osmIdFromBuildingId(p.parentBuildingId),
-          boundary:p.verified===true||p.verified==='true'?'Verified':'Provisional'
-        });
+        renderPropertyCard({...linkedUnit,...p});
       }
       map.on('click','retail-frontage',showFrontageDetails);
       map.on('click','building-fill',event=>{
@@ -344,15 +336,9 @@
         const record=addressRecords[p.buildingId];
         const linkedUnit=record&&Array.isArray(record.units)&&record.units.length===1?record.units[0]:{};
         selectUnit(p.buildingId,'building');
-        renderPropertyCard({...record,...linkedUnit,...p},{
-          unitId:p.buildingId,
-          unitOsmId:p.osmId||osmIdFromBuildingId(p.buildingId),
-          parentId:'',
-          parentOsmId:'',
-          boundary:p.addressVerified||record?.verified?'Verified':'Provisional'
-        });
+        renderPropertyCard({...record,...linkedUnit,...p});
       }
-      function renderPropertyCard(p,mapping){
+      function renderPropertyCard(p){
         const vacant=['available','not-on-market','being-occupied'].includes(p.status);
         const title=vacant?'Vacant':p.name||p.buildingName||'Occupant not recorded';
         const address=p.address||p.displayAddress||'Address not recorded';
@@ -364,14 +350,7 @@
           ['Rent',propertyValue(p,['rent','annualRent','annual_rent'],'annual')],
           ['AR&R / sq ft',propertyValue(p,['arrPerSqFt','arr_per_sq_ft','arrSqFt'],'perSqFt')]
         ]):'';
-        const mappingRows=[
-          ['Unit mapping ID',mapping.unitId],
-          ['Unit OSM feature',mapping.unitOsmId],
-          ['Parent mapping ID',mapping.parentId],
-          ['Parent OSM feature',mapping.parentOsmId],
-          ['Boundary',mapping.boundary]
-        ].filter(([,value])=>value);
-        details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}${sectionHtml('Mapping information',mappingRows,true)}`;
+        details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}`;
         details.hidden=false;
         details.querySelector('.close').addEventListener('click',()=>clearSelection(true));
       }
