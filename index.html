@@ -12,8 +12,12 @@
     html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#edf1ee}
     body{display:grid;grid-template-rows:auto minmax(0,1fr)}
     .topbar{position:relative;z-index:5;padding:14px 16px;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 4px 16px #17221d18}
+    .topbar-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .topbar h1{margin:0;font-size:clamp(1.15rem,4vw,1.55rem)}
     .topbar p{margin:5px 0 0;color:var(--muted);font-size:.88rem;line-height:1.35}
+    .ous-logo-link{display:inline-flex;flex:0 0 auto;border-radius:8px}
+    .ous-logo-link:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+    .ous-logo-link img{display:block;width:auto;height:54px;object-fit:contain}
     .status-tools{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center;gap:8px;margin-top:10px;max-width:620px}
     .status-tools label{font-size:.82rem;font-weight:700}
     .status-tools select{width:100%;min-width:0;padding:7px 30px 7px 9px;border:1px solid #b8c5bd;border-radius:8px;background:#f5f7f5;color:var(--ink);font:inherit}
@@ -49,12 +53,18 @@
     .map-error{position:absolute;z-index:6;inset:20px;display:none;place-items:center;padding:24px;background:#fff;border:1px solid var(--line);border-radius:14px;text-align:center}
     .maplibregl-ctrl-attrib{font-size:10px}
     @media(min-width:760px){.topbar{padding:15px 22px}.panel{left:auto;right:18px;bottom:18px;width:340px;max-height:58%;padding:17px}.legend{top:18px;left:18px}.maplibregl-ctrl-bottom-right{right:0;bottom:0}}
+    @media(max-width:480px){.ous-logo-link img{height:42px}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
   </style>
 </head>
 <body>
   <header class="topbar">
-    <h1>Union Street Retail Units</h1>
+    <div class="topbar-heading">
+      <h1>Union Street Retail Units</h1>
+      <a class="ous-logo-link" href="https://ourunionstreet.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Our Union Street website">
+        <img src="OUS%20Logo.png" alt="Our Union Street">
+      </a>
+    </div>
     <div class="status-tools">
       <label for="status-filter">Highlight status</label>
       <select id="status-filter">
