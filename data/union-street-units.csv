@@ -70,7 +70,7 @@ osm-way-314113003,,way/314113003,100 Union Street,Peterkins,occupied,,,,,,,TRUE,
 osm-way-1204758028,,way/1204758028,101–103 Union Street,Aberdeen Vinyl,occupied,,,,,,,TRUE,,Local occupancy check
 osm-way-314113013,,way/314113013,104 Union Street,iCrack,occupied,,,,,,,TRUE,,Local occupancy check
 osm-way-1204758029,,way/1204758029,105 Union Street,The Highlander,occupied,,,,,,,TRUE,,Local occupancy check
-osm-way-316910796,,way/316910796,107 Union Street,Viet Nails,occupied,,,,,,,TRUE,,Local occupancy check
+osm-way-316910796,,way/316910796,107 Union Street,Vacant,available,46000,2406,22908,50000,30.3,,TRUE,,Local occupancy check
 osm-way-1204758031,,way/1204758031,111 Union Street,Popeyes,filled,,,,,,,TRUE,,Local occupancy check
 building-314091333-unit-114-116,osm-way-314091333,node/11143918499,"114–116 Union Street, AB10 1JJ",Beaverbrooks,occupied,,,,,,,FALSE,,Occupant and address from OSM; OSM address typo corrected from 114–1166; internal dividing line is provisional
 osm-way-1053169097,,way/1053169097,117 Union Street,McDonald’s,occupied,,,,,,,TRUE,,Local occupancy check
@@ -103,7 +103,7 @@ building-404969666-unit-164,osm-way-404969666,node/4590032277,164 Union Street,T
 building-404969666-unit-166,osm-way-404969666,node/6053234934,166 Union Street,The Fade Factory,occupied,,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage
 osm-way-404613675,,way/404613675,167 Union Street,Vacant,not-on-market,,,,,,,TRUE,,Was Sally Beauty
 osm-way-404613671,,way/404613671,171 Union Street,Santander,occupied,,,,,,,TRUE,,Local occupancy check
-osm-way-404969655,,way/404969655,172 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Was Flight Centre
+osm-way-404969655,,way/404969655,172 Union Street,Vacant,occupied-to-let,45750,5576,22784,60000,14.85,,TRUE,,Was Flight Centre
 osm-way-404613672,,way/404613672,175 Union Street,Paddy Power,occupied,,,,,,,TRUE,,Local occupancy check
 osm-way-1214150370,,way/1214150370,177 Union Street,Game District,filled,,,,,,,TRUE,,Local occupancy check
 building-404613674-unit-181,osm-way-404613674,node/11249160680,181 Union Street,MERKUR Slots,occupied,,,,,,,TRUE,,Occupant and address confirmed locally; top-right frontage between Coral and Game District
