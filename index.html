@@ -18,9 +18,11 @@
     .ous-logo-link{display:inline-flex;flex:0 0 auto;border-radius:8px}
     .ous-logo-link:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
     .ous-logo-link img{display:block;width:auto;height:54px;object-fit:contain}
-    .status-tools{display:grid;grid-template-columns:112px minmax(0,1fr);align-items:center;gap:8px;margin-top:10px;max-width:620px}
+    .status-tools{display:grid;grid-template-columns:112px minmax(0,1fr) auto;align-items:center;gap:8px;margin-top:10px;max-width:760px}
     .status-tools label{font-size:.82rem;font-weight:700}
     .status-tools select{width:100%;min-width:0;padding:7px 30px 7px 9px;border:1px solid #b8c5bd;border-radius:8px;background:#f5f7f5;color:var(--ink);font:inherit}
+    .progress-button{min-height:35px;padding:7px 11px;border:1px solid var(--accent);border-radius:8px;background:var(--accent);color:#fff;font:inherit;font-size:.82rem;font-weight:700;cursor:pointer}
+    .progress-button:focus-visible{outline:3px solid #e6bd52;outline-offset:2px}
     .status-totals{grid-column:1/-1;margin:0!important;font-size:.76rem!important}
     .layout{position:relative;min-height:0}
     #map{position:absolute;inset:0;background:#dfe6e1}
@@ -39,6 +41,12 @@
     .not-recorded{color:#7a8580;font-weight:500!important;font-style:italic}
     .property-note{margin:2px 0 0!important;padding:11px 12px;border-left:4px solid var(--available);border-radius:6px;background:#f8f3df;color:var(--ink)!important}
     .property-note strong{display:block;margin-bottom:3px}
+    .progress-period{margin:0 0 12px!important;color:var(--ink)!important;font-weight:700}
+    .progress-table{width:100%;border-collapse:collapse;font-size:.86rem}
+    .progress-table th,.progress-table td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right}
+    .progress-table th:first-child{text-align:left}
+    .progress-table thead th{color:var(--muted);font-size:.78rem;text-transform:uppercase}
+    .progress-metrics{margin-top:12px}
     .osm-records{display:grid;gap:8px;margin:8px 0}
     .osm-record{padding:9px 10px;background:#f1f5f2;border-left:4px solid #6f9a7e;border-radius:6px}
     .osm-record strong,.osm-record span{display:block}
@@ -55,6 +63,7 @@
     .map-error{position:absolute;z-index:6;inset:20px;display:none;place-items:center;padding:24px;background:#fff;border:1px solid var(--line);border-radius:14px;text-align:center}
     .maplibregl-ctrl-attrib{font-size:10px}
     @media(min-width:760px){.topbar{padding:15px 22px}.panel{left:auto;right:18px;bottom:18px;width:340px;max-height:58%;padding:17px}.legend{top:18px;left:18px}.maplibregl-ctrl-bottom-right{right:0;bottom:0}}
+    @media(max-width:600px){.status-tools{grid-template-columns:112px minmax(0,1fr)}.progress-button{grid-column:2}}
     @media(max-width:480px){.ous-logo-link img{height:42px}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
   </style>
@@ -80,6 +89,7 @@
         <option value="not-on-market">Vacant: Not on Market</option>
         <option value="being-occupied">Vacant: Being Filled</option>
       </select>
+      <button class="progress-button" id="project-progress" type="button" aria-expanded="false">Project Progress</button>
       <p class="status-totals" id="status-totals" aria-live="polite"></p>
     </div>
   </header>
@@ -112,6 +122,7 @@
       const error=document.getElementById('map-error');
       const statusFilter=document.getElementById('status-filter');
       const statusTotals=document.getElementById('status-totals');
+      const progressButton=document.getElementById('project-progress');
       const addressRecords=globalThis.UNION_STREET_CENTRAL_ADDRESSES||{};
       const buildingOverrides=globalThis.UNION_STREET_CENTRAL_BUILDING_OVERRIDES||{};
       const osmFeatureRecords={...(globalThis.UNION_STREET_CENTRAL_OSM_FEATURES||{}),...(globalThis.UNION_STREET_EAST_OSM_FEATURES||{}),...(globalThis.UNION_STREET_WEST_OSM_FEATURES||{})};
@@ -225,6 +236,31 @@
         const highlighted=selected==='all'?countedUnits.length:countFor(selected);
         statusTotals.innerHTML=`<strong>${highlighted}</strong> of <strong>${countedUnits.length}</strong> mapped frontage records highlighted · ${statusOrder.filter(status=>totals[status]).map(status=>`${labels[status]} ${totals[status]}`).join(' · ')}`;
       }
+      function renderProjectProgress(){
+        if(details.dataset.panel==='progress'&&!details.hidden){
+          clearSelection(true);
+          return;
+        }
+        clearSelection(false);
+        if(!globalThis.UNION_STREET_CSV_LOAD?.loaded){
+          details.innerHTML='<button class="close" type="button" aria-label="Close project progress">×</button><h2>Project Progress</h2><p>Progress figures are unavailable because the property register could not be loaded.</p>';
+        }else{
+          const occupiedNow=countFor('all-occupied');
+          const vacantNow=countFor('all-vacant');
+          const closures=countedUnits.filter(feature=>feature.properties.closure).length;
+          const filled=totals.filled||0;
+          const netChange=filled-closures;
+          const occupiedThen=occupiedNow-netChange;
+          const vacantThen=vacantNow+netChange;
+          const percentage=value=>`${(value/countedUnits.length*100).toFixed(1)}%`;
+          details.innerHTML=`<button class="close" type="button" aria-label="Close project progress">×</button><h2>Project Progress</h2><p class="progress-period">Since March 2023:</p><table class="progress-table"><thead><tr><th scope="col"></th><th scope="col">Then</th><th scope="col">Now</th></tr></thead><tbody><tr><th scope="row">Occupied</th><td>${occupiedThen} (${percentage(occupiedThen)})</td><td>${occupiedNow} (${percentage(occupiedNow)})</td></tr><tr><th scope="row">Vacant</th><td>${vacantThen} (${percentage(vacantThen)})</td><td>${vacantNow} (${percentage(vacantNow)})</td></tr></tbody></table><dl class="property-fields progress-metrics"><dt>Closures</dt><dd>${closures}</dd><dt>Filled</dt><dd>${filled}</dd></dl>`;
+        }
+        details.dataset.panel='progress';
+        details.hidden=false;
+        progressButton.setAttribute('aria-expanded','true');
+        details.querySelector('.close').addEventListener('click',()=>clearSelection(true));
+      }
+      progressButton.addEventListener('click',renderProjectProgress);
       const map=new maplibregl.Map({container:'map',style:'https://tiles.openfreemap.org/styles/liberty',center:[-2.0987,57.14655],zoom:17.35,bearing:-74,pitch:0,attributionControl:false});
       globalThis.unionStreetMap=map;
       map.addControl(new maplibregl.NavigationControl({showCompass:false}),'bottom-left');
@@ -366,6 +402,7 @@
         ]):'';
         const noteHtml=vacant&&p.note?`<p class="property-note"><strong>Note:</strong>${escapeHtml(p.note)}</p>`:'';
         details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}${noteHtml}`;
+        details.dataset.panel='property';
         details.hidden=false;
         details.querySelector('.close').addEventListener('click',()=>clearSelection(true));
       }
@@ -382,7 +419,7 @@
         if(map.getLayer('selected-building-outline'))map.setFilter('selected-building-outline',['==',['get','buildingId'],'']);
         if(map.getLayer('selected-frontage-outline'))map.setFilter('selected-frontage-outline',['==',['get','frontageId'],'']);
         updateSelected3dEdges();
-        if(hideDetails)details.hidden=true;
+        if(hideDetails){details.hidden=true;details.dataset.panel='';progressButton.setAttribute('aria-expanded','false')}
       }
       function updateSelected3dEdges(){
         if(!map.getLayer('height-pilot-edges'))return;
@@ -446,6 +483,7 @@
             if(record.source_note)p.sourceNote=record.source_note.trim();
             if(record.note)p.note=record.note.trim();
             if(record.letting_agent)p.lettingAgent=record.letting_agent.trim();
+            if(record.closure)p.closure=record.closure.trim().toLowerCase()==='yes';
             if(record.verification_date)p.verificationDate=record.verification_date.trim();
             if(record.verified)p.verified=/^(true|yes|1)$/i.test(record.verified.trim());
             for(const [column,property] of [

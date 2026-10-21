@@ -1,214 +1,214 @@
-﻿unit_id,parent_building_id,osm_id,address,occupant,status,rateable_value,area_sq_ft,annual_rates,annual_rent,arr_per_sq_ft,uprn,verified,verification_date,source_note,note,letting_agent
-osm-way-1053169095,,way/1053169095,133-141 Union Street,Nationwide,occupied,85000,,,,,,FALSE,,OpenStreetMap snapshot · 18 September 2026,,
-osm-way-316663039,,way/316663039,1 Union Terrace,Chaophrya,occupied,91000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-316663042,,way/316663042,148 Union Street,Vacant,available,21250,2263,10221,25000,15.56,,FALSE,,Was Cleavin Barber,Was Cleavin' Barber,Shepherd
-osm-way-404925607,,way/404925607,208 Union Street,Starbucks,occupied,43000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-404925611,,way/404925611,220 Union Street,Digby Brown,occupied,25750,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-1228297548,,way/1228297548,204 Union Street,Co-op Food,occupied,237000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-building-404583404-unit-1-3,osm-way-404583404,node/10090207379,1–3 Justice Street,Grade A Barbers,occupied,8400,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-313986638,,way/313986638,2–8 King Street,Gio’s by La Lombarda,occupied,47250,,,,,,TRUE,,Local occupancy check,,
-trinity-frontage-1,osm-way-132130886,node/11167737033,3–7 Union Bridge,Poundland,occupied,129000,,,,,,FALSE,,Occupant and address confirmed locally; frontage extent provisional,,
-osm-way-313974153,,way/313974153,4 Ship Row,Cash Converters,filled,21250,,,,,,TRUE,,Local occupancy check,,
-osm-way-314561430,,way/314561430,5 Castle Street,The Archibald Simpson,occupied,192000,,,,,,FALSE,,OpenStreetMap east extension snapshot · 18 September 2026,,
-osm-way-1180776446,,way/1180776446,5–9 Union Street,BrewDog,occupied,98000,,,,,,TRUE,,Local occupancy check,,
-building-404583404-unit-7-9,osm-way-404583404,,7–9 Justice Street,Castlegate Collectibles,occupied,8600,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-404583405,,way/404583405,11 Castlegate,The Worm,occupied,,,,,,,TRUE,,Local occupancy check,,
-trinity-frontage-5,osm-way-132130886,node/2616367173,11 Union Bridge,HMV,occupied,110000,,,,,,FALSE,,Occupant and address confirmed locally; frontage extent provisional,,
-osm-way-404583408,,way/404583408,13 Castle Street,Siam Cottage,occupied,12000,,,,,,TRUE,,Local occupancy check,,
-osm-way-404583399,,way/404583399,15 Castle Street,Aberdeen VR,occupied,10500,,,,,,TRUE,,Local occupancy check,,
-osm-way-404583403,,way/404583403,17 Castle Street,Portals,occupied,14250,,,,,,TRUE,,Local occupancy check,,
-osm-way-1180776449,,way/1180776449,17 Union Street,Londis,occupied,12750,,,,,,TRUE,,Local occupancy check,,
-osm-way-404583407,,way/404583407,19 Castle Street,Castle Bar,occupied,16000,,,,,,TRUE,,Local occupancy check,,
-osm-way-1180776447,,way/1180776447,21 Union Street,Union Cafe & Bistro,occupied,16500,,,,,,TRUE,,Local occupancy check,,
-osm-way-404583406,,way/404583406,22–23A Castle Street,Hea Bubble Tea,occupied,10750,,,,,,TRUE,,Local occupancy check,,
-osm-way-313943991,,way/313943991,25 Union Street,Bargain Deals Homeware & Hardware,filled,21750,,,,,,TRUE,,Local occupancy check,,
-osm-way-636120624,,way/636120624,26–30 Union Street,Miller & Carter,occupied,280000,,,,,,TRUE,,Local occupancy check,,
-osm-way-313943990,,way/313943990,27 Union Street,El Classico Barber,occupied,17500,,,,,,TRUE,,Local occupancy check,,
-osm-way-313943986,,way/313943986,31 Union Street,British Heart Foundation,occupied,16500,,,,,,TRUE,,Local occupancy check,,
-osm-way-314142354,,way/314142354,32 Castle Street,Carlton Bar,occupied,13750,,,,,,TRUE,,Local occupancy check,,
-osm-way-313943988,,way/313943988,33 Union Street,Phone Fix,occupied,10000,,,,,,TRUE,,Local occupancy check,,
-osm-way-314142349,,way/314142349,34 Castle Street,Vacant,not-on-market,11000,,,,,,TRUE,,Was Vegan Bakery,Was Vegan Bay Bakery,
-building-314142350-unit-36,osm-way-314142350,node/3201606789,36 Castle Street,VSA,occupied,,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-313943989,,way/313943989,37 Union Street,Premier Food Store,occupied,23500,,,,,,TRUE,,Local occupancy check,,
-building-314142350-unit-38,osm-way-314142350,node/3201606789,38 Castle Street,VSA,occupied,103000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-636141930,,way/636141930,38 Union Street,Estabulo,filled,80000,,,,,,TRUE,,OpenStreetMap and local occupancy check,,
-building-314020857-unit-39,osm-way-314020857,,39 Union Street,Annie Mo’s,occupied,52500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-636141927,,way/636141927,40–42 Union Street,Optical Express,occupied,45250,,,,,,TRUE,,Local occupancy check,,
-building-314020857-unit-43-45,osm-way-314020857,node/9180783767,43–45 Union Street,Tesco Express,occupied,89000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-636141926,,way/636141926,44 Union Street,Outfits,occupied,17250,,,,,,TRUE,,Local occupancy check,,
-osm-way-314142346,,way/314142346,45 Castle Street,Mercat Bookshop,occupied,,,,,,,TRUE,,Local occupancy check,,
-osm-way-314142347,,way/314142347,46 Castle Street,VSA,occupied,20500,,,,,,TRUE,,Local occupancy check,,
-building-636141916-unit-46,osm-way-636141916,,46 Union Street,Entertainment Exchange,occupied,26750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-314020861,,way/314020861,47 Union Street,Union Barbers,filled,15250,,,,,,TRUE,,Local occupancy check,,
-building-636141916-unit-48,osm-way-636141916,node/11179531182,48 Union Street,William Hill,occupied,20750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-314142348,,way/314142348,49 Castle Street,Skynails and Spa,occupied,9100,,,,,,TRUE,,Local occupancy check,,
-osm-way-314020851,,way/314020851,49 Union Street,Fone Spot,occupied,20750,,,,,,TRUE,,Local occupancy check,,
-building-636141916-unit-50,osm-way-636141916,node/11179531183,50 Union Street,Ladbrokes,occupied,23500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-building-314020864-unit-51,osm-way-314020864,node/9180783770,51 Union Street,VPZ,occupied,17250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-314142355,,way/314142355,52 Castlegate,Old Blackfriars,occupied,50000,,,,,,TRUE,,Local occupancy check,,
-osm-way-636141922,,way/636141922,52–54 Union Street,Vacant,available,50000,4661,24050,75000,21.25,,TRUE,,Was Halifax,Was Halifax Bank,CBRE
-building-314020864-unit-53,osm-way-314020864,,53 Union Street,Mister C’s,filled,19750,,,,,,TRUE,,Occupant and address confirmed locally; filled since the project baseline,,
-osm-way-314021127,,way/314021127,55 Union Street,Greggs,occupied,24000,,,,,,TRUE,,Local occupancy check,,
-osm-way-404609507,,way/404609507,55–56 Castle Street,The Tilted Wig,occupied,14000,,,,,,TRUE,,Local occupancy check,,
-osm-way-636141923,,way/636141923,56–58 Union Street,Specsavers,occupied,27500,,,,,,TRUE,,Local occupancy check,,
-osm-way-314021129,,way/314021129,57 Union Street,Evans Cycles,occupied,64500,,,,,,TRUE,,Local occupancy check,,
-building-314021130-unit-59,osm-way-314021130,,59 Union Street,Vacant,available,26000,11363,12506,40000,4.62,,TRUE,,Was World Buffet,Was World Buffet,Sims Property
-osm-way-636141921,,way/636141921,60–62 Union Street,Virgin Money,occupied,89000,,,,,,TRUE,,Local occupancy check,,
-building-314021130-unit-61-63,osm-way-314021130,node/3201301965,61–63 Union Street,Sports Direct,occupied,86000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-314113012,,way/314113012,73 Union Street,Black Sheep Coffee,filled,55000,,,,,,TRUE,,Local occupancy check,,
-osm-way-314113011,,way/314113011,78–80 Union Street,Vacant,not-on-market,,,,,,,TRUE,,Was RBS,,
-osm-way-314113007,,way/314113007,81 Union Street,Vacant,not-on-market,18750,,,,,,TRUE,,Was Lush,"Was Lush, owned by ACC",
-building-314113005-unit-82,osm-way-314113005,node/11181858059,82 Union Street,Pro Mobile,occupied,22000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-314113004,,way/314113004,85 Union Street,Vacant,not-on-market,33250,,,,,,TRUE,,Was Dizzy's,"Was Dizzy's, ownded by ACC",
-building-314113005-unit-86,osm-way-314113005,node/5040921221,86 Union Street,Timpson,occupied,19500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-osm-way-1204758026,,way/1204758026,87 Union Street,Vacant,not-on-market,41000,,,,,,TRUE,,Was Attic,"Was Attic, owned by ACC",
-building-314113010-unit-88,osm-way-314113010,,88 Union Street,Vacant,available,20000,861,9620,25000,37.31,,TRUE,,Was H Samuel,Was McGowan's Jewellers,Breck & Landed
-building-314113010-unit-92,osm-way-314113010,,92 Union Street,Vacant,available,34500,1321,16595,40000,42.84,,TRUE,,Was Phone Shop,Was Vodaphone,Breck & Landed
-osm-way-314113008,,way/314113008,95–99 Union Street,HSBC,occupied,100000,,,,,,TRUE,,Local occupancy check,,
-osm-way-314113009,,way/314113009,98 Union Street,Vacant,available,32250,992,15512,37500,53.44,,TRUE,,Was O2,Was O2,Breck & Landed
-osm-way-314113003,,way/314113003,100 Union Street,Peterkins,occupied,98000,,,,,,TRUE,,Local occupancy check,,
-osm-way-1204758028,,way/1204758028,101–103 Union Street,Aberdeen Vinyl,occupied,47000,,,,,,TRUE,,Local occupancy check,,
-osm-way-314113013,,way/314113013,104 Union Street,iCrack,occupied,10750,,,,,,TRUE,,Local occupancy check,,
-osm-way-1204758029,,way/1204758029,105 Union Street,The Highlander,occupied,36500,,,,,,TRUE,,Local occupancy check,,
-osm-way-316910796,,way/316910796,107 Union Street,Vacant,available,46000,2406,22126,50000,29.98,,TRUE,,Local occupancy check,Was JD Sports,Culverwell
-osm-way-1204758031,,way/1204758031,111 Union Street,Popeyes,filled,69000,,,,,,TRUE,,Local occupancy check,,
-building-314091333-unit-114-116,osm-way-314091333,node/11143918499,"114–116 Union Street, AB10 1JJ",Beaverbrooks,occupied,34250,,,,,,FALSE,,Occupant and address from OSM; OSM address typo corrected from 114–1166; internal dividing line is provisional,,
-osm-way-1053169097,,way/1053169097,117 Union Street,McDonald’s,occupied,77500,,,,,,TRUE,,Local occupancy check,,
-building-314091333-unit-118,osm-way-314091333,node/11143918498,"118 Union Street, AB10 1JJ",German Döner Kebab,filled,29250,,,,,,FALSE,,Occupant and address confirmed locally; western edge shared with 120 without overlap,,
-building-314091334-unit-120,osm-way-314091334,,120 Union Street,Arcadia,filled,43750,,,,,,TRUE,,Occupied unit confirmed locally; dividing edge parallel to the wall alongside 122A,,
-building-404572403-unit-121,osm-way-404572403,node/11110519665,121 Union Street,Poundworld,occupied,35250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-building-314091334-unit-122,osm-way-314091334,,122 Union Street,Bargain Buys,occupied,88000,,,,,,TRUE,,Occupied unit confirmed locally; shared edge parallel to the wall alongside 122A,,
-building-314091321-unit-122a,osm-way-314091321,node/4590032224,"122A Union Street, AB10 1JJ",Adams Watch Specialist,occupied,20250,,,,,,FALSE,,Occupant and address from OSM; eastern edge shared with 122 without overlap,,
-building-404572403-unit-123,osm-way-404572403,node/8872620353,123 Union Street,Taco Bell,occupied,32500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,
-building-404572401-unit-125-union-worx,osm-way-404572401,,125 Union Street,Union Worx,filled,,,,,,,TRUE,,Narrower unit confirmed locally; filled since the project baseline,,
-building-404572401-unit-125-cancer-research,osm-way-404572401,node/8872620352,125 Union Street,Cancer Research UK,occupied,36000,,,,,,TRUE,,Wider occupied unit confirmed locally; dividing edge aligned with the building side walls,,
-osm-way-1204758034,,way/1204758034,127 Union Street,"Mobiles, Gadgets and Vapes",occupied,32500,,,,,,TRUE,,Local occupancy check,,
-building-314091321-unit-128,osm-way-314091321,node/4590032223,"128 Union Street, AB10 1JJ",Ramsdens,occupied,19250,,,,,,FALSE,,Occupant and address from OSM; internal dividing line is provisional,,
-building-314091322-unit-130,osm-way-314091322,,"130 Union Street, AB10 1JJ",Vacant,being-occupied,16500,,,,,,FALSE,,Address and vacancy from OSM; internal dividing line is provisional,Was McColls - plans for beauty salon,
-osm-way-404572404,,way/404572404,131 Union Street,Refill Station,occupied,26750,,,,,,TRUE,,Local occupancy check,,
-building-314091322-unit-132,osm-way-314091322,node/11143918501,"132 Union Street, AB10 1JJ",TAG Heuer,filled,28250,,,,,,FALSE,,Occupant and address from OSM; internal dividing line is provisional,,
-building-314776718-unit-west,osm-way-314776718,,140 Union Street,Rolex,filled,106000,,,,,,TRUE,,Eastern unit; occupant and address confirmed locally; filled since the project baseline,,
-building-314776718-unit-east,osm-way-314776718,node/4590032219,142 Union Street,Jamieson & Carry,occupied,106000,,,,,,TRUE,,Western unit; occupant and address confirmed locally,,
-trinity-frontage-3,osm-way-132130886,node/11167737018,143–149 Union Street,Primark,occupied,230000,,,,,,FALSE,,Occupant and address from OSM; frontage extent provisional,,
-osm-way-316663047,,way/316663047,150 Union Street,Vacant,being-occupied,65000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,Was MOKA Bar - new restaurant & bar opening soon,
-osm-relation-16795469,,relation/16795469,152 Union Street,KFC,occupied,34750,,,,,,TRUE,,OpenStreetMap and local occupancy check,,
-osm-way-404969663,,way/404969663,154 Union Street,Lakeland,occupied,44000,,,,,,TRUE,,Local occupancy check,,
-trinity-frontage-2,osm-way-132130886,node/13240579844,155 Union Street,Vacant,being-occupied,,,,,,,FALSE,,Address and vacancy status confirmed locally; frontage extent provisional,"Was Chopstix, plan for Mezzo Restaurant",
-osm-way-404969668,,way/404969668,156 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,
-bridge-frontage-1,osm-way-378937853,,157–159 Union Street,Vacant,available,42750,2450,20563,40000,24.72,,FALSE,,Was Millets,Was Millets,Graham & Sibbald
-osm-way-404969660,,way/404969660,160–162 Union Street,Caffè Nero,occupied,41000,,,,,,TRUE,,Local occupancy check,,
-bridge-frontage-2,osm-way-378937853,node/6036096495,161 Union Street,Greggs,occupied,64500,,,,,,FALSE,,Occupant and address confirmed locally; frontage extent provisional,,
-bridge-frontage-3,osm-way-378937853,node/290633298,163–165 Union Street,Barclays,occupied,74500,,,,,,FALSE,,Occupant and address confirmed locally; frontage extent provisional,,
-building-404969666-unit-164,osm-way-404969666,node/4590032277,164 Union Street,The Noodle Library,filled,21750,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-building-404969666-unit-166,osm-way-404969666,node/6053234934,166 Union Street,The Fade Factory,occupied,12250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,
-osm-way-404613675,,way/404613675,167 Union Street,Vacant,not-on-market,39500,,,,,,TRUE,,Was Sally Beauty,Was Sally Beauty - not yet on market,
-osm-way-404613671,,way/404613671,171 Union Street,Santander,occupied,45250,,,,,,TRUE,,Local occupancy check,,
-osm-way-404969655,,way/404969655,172 Union Street,Vacant,filled,45750,5576,22006,60000,14.71,,TRUE,,Was Flight Centre,,
-osm-way-404613672,,way/404613672,175 Union Street,Paddy Power,occupied,22750,,,,,,TRUE,,Local occupancy check,,
-osm-way-1214150370,,way/1214150370,177 Union Street,Game District,filled,23750,,,,,,TRUE,,Local occupancy check,,
-building-404613674-unit-181,osm-way-404613674,node/11249160680,181 Union Street,MERKUR Slots,occupied,39250,,,,,,TRUE,,Occupant and address confirmed locally; top-right frontage between Coral and Game District,,
-building-404613674-unit-181b,osm-way-404613674,node/11249160681,181B Union Street,Coral,occupied,20250,,,,,,TRUE,,Occupant and address confirmed locally; top-left frontage immediately adjacent to Ann Summers,,
-osm-way-1214150371,,way/1214150371,183 Union Street,Ann Summers,occupied,39250,,,,,,TRUE,,Local occupancy check,,
-osm-way-1214150373,,way/1214150373,185 Union Street,Ultra Mobile,occupied,15250,,,,,,TRUE,,Local occupancy check,,
-building-1121522334-unit-187,osm-way-1121522334,node/7571564793,187 Union Street,Edinburgh Woollen Mill,occupied,24500,,,,,,TRUE,,Occupant and address confirmed locally; wider unit above the narrow 189 boundary strip,,
-building-1121522334-unit-189,osm-way-1121522334,,189 Union Street,Vacant,being-occupied,27250,,,,,,TRUE,,Vacancy and address confirmed locally; narrow unit running alongside the British Red Cross boundary,,
-building-404613677-unit-191,osm-way-404613677,node/6038966374,191 Union Street,British Red Cross,occupied,29250,,,,,,TRUE,,Occupant and address confirmed locally; dividing line aligned with the neighbouring frontage boundaries,,
-building-404613677-unit-195,osm-way-404613677,node/6038966358,195 Union Street,PDSA,filled,36500,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-osm-way-404613676,,way/404613676,201 Union Street,Glenhouse,filled,53000,,,,,,TRUE,,Local occupancy check,,
-osm-way-1228297547,,way/1228297547,206A Union Street,Heavenly Desserts,filled,25750,,,,,,TRUE,,Local occupancy check,,
-osm-way-1228297546,,way/1228297546,206B Union Street,Oodles Noodles,filled,19500,,,,,,TRUE,,Local occupancy check,,
-building-404573530-unit-207a,osm-way-404573530,node/11251451421,207A Union Street,Vacant,available,16750,1441,8057,22000,20.86,,TRUE,,Was Newsbox,Was Newsbox,Mark Halliday
-osm-way-404573533,,way/404573533,209 Union Street,Ladbrokes,occupied,22750,,,,,,TRUE,,Local occupancy check,,
-osm-way-1214383276,,way/1214383276,213 Union Street,The Grill,occupied,63500,,,,,,TRUE,,Local occupancy check,,
-building-404573532-unit-215,osm-way-404573532,node/9106209441,215 Union Street,Silvan Mobile Repair,occupied,15750,,,,,,TRUE,,Occupant and address confirmed locally; frontage beside The Grill,,
-building-404573532-unit-217,osm-way-404573532,node/9106209440,217 Union Street,Dark Fade,occupied,20250,,,,,,TRUE,,Occupant and address confirmed locally; side-by-side frontage with Silvan Mobile Repair,,
-building-1214395880-unit-221,osm-way-1214395880,node/290633292,221 Union Street,Vacant,not-on-market,47250,,,,,,TRUE,,Was MHA,,
-building-1214395880-unit-225,osm-way-1214395880,node/11251612971,225 Union Street,Vacant,not-on-market,16500,,,,,,TRUE,,Was MHA,,
-osm-way-404925613,,way/404925613,226 Union Street,Lolo & Co,filled,24250,,,,,,TRUE,,Local occupancy check,,
-building-1214395880-unit-227,osm-way-1214395880,node/11251612972,227 Union Street,Vacant,not-on-market,19000,,,,,,TRUE,,Was MHA,,
-osm-way-1214395881,,way/1214395881,229 Union Street,Chaiwala,filled,29750,,,,,,TRUE,,Local occupancy check,,
-osm-way-1214395882,,way/1214395882,231 Union Street,Vacant,available,21500,2616,10342,30000,15.42,,TRUE,,Was MHA,Was MHA Charity Shop,Shepherd
-building-643330736-unit-234,osm-way-643330736,node/3502766632,234 Union Street,Pret A Manger,occupied,45250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,
-building-643330736-unit-236,osm-way-643330736,node/6054432449,236 Union Street,British Heart Foundation Home Store,occupied,51000,,,,,,TRUE,,Occupant and address from OSM; internal dividing line is provisional and orthogonal to the street frontage,,
-osm-way-1214395883,,way/1214395883,247 Union Street,Cruise,occupied,61500,,,,,,TRUE,,Local occupancy check,,
-osm-way-723877506,,way/723877506,248 Union Street,The Mortgage & Property Centre,occupied,30000,,,,,,TRUE,,Local occupancy check,,
-building-723877512-unit-250,osm-way-723877512,node/9048154294,250 Union Street,Grampian Credit Union,occupied,28500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing lines are provisional and orthogonal to the street frontage,,
-building-723877512-unit-252a,osm-way-723877512,node/8917189492,252A Union Street,Seventh Heaven,filled,13250,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-building-723877512-unit-252b,osm-way-723877512,node/12645369272,252B Union Street,Poke Me Nails,filled,10000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-osm-way-723877510,,way/723877510,254 Union Street,Vovem,occupied,78000,,,,,,TRUE,,Local occupancy check,,
-osm-way-1214395884,,way/1214395884,255 Union Street,Vaping 101,occupied,33750,,,,,,TRUE,,Local occupancy check,,
-osm-way-723877509,,way/723877509,256 Union Street,Signature 2,occupied,26000,,,,,,TRUE,,Local occupancy check,,
-osm-way-1214395887,,way/1214395887,257–259 Union Street,Amarone,occupied,76000,,,,,,TRUE,,Local occupancy check,,
-building-1214395888-unit-261,osm-way-1214395888,node/9106209428,261 Union Street,Vacant,available,32500,4138,15633,40000,13.44,,TRUE,,Was SK:N,Was SK:N Clinic,Graham & Sibbald
-osm-way-723877508,,way/723877508,262 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,
-building-1214395888-unit-263,osm-way-1214395888,node/11251612995,263 Union Street,Gidi Grill,occupied,48250,,,,,,TRUE,,Occupant and address confirmed locally; dividing edge aligned with the neighbouring unit boundaries,,
-osm-way-723877507,,way/723877507,264 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,
-osm-way-1214395889,,way/1214395889,267 Union Street,Trailfinders,occupied,24000,,,,,,TRUE,,Local occupancy check,,
-building-1214395890-unit-269,osm-way-1214395890,node/9106209425,269 Union Street,So NYC Bagels & Brew,occupied,42750,,,,,,TRUE,,Occupant and address confirmed locally; footprint mirrors Trailfinders across their shared boundary,,
-building-463771008-unit-333,osm-way-463771008,node/290633287,333 Union Street,Soul,occupied,240000,,,,,,TRUE,,Occupant confirmed locally; boundary with 335 aligned to the block's unit edges,,
-building-404999671-unit-335,osm-way-404999671,node/4583086890,335 Union Street,Vacant,being-occupied,29250,,,,,,TRUE,,Being-filled vacancy confirmed locally; both side boundaries aligned to the block's unit edges,"Was Thomas Cook, plans for new restaurant",
-building-404999673-unit-339,osm-way-404999673,node/9106209422,339 Union Street,Ba Bai Cafe,filled,25000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-building-404999673-unit-345,osm-way-404999673,node/11251877485,345 Union Street,Social Monkey,filled,36250,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-building-404999676-unit-347,osm-way-404999676,node/9106209421,347 Union Street,8848,occupied,31250,,,,,,TRUE,,Occupant and address confirmed locally,,
-building-404999676-unit-349,osm-way-404999676,node/9106209420,349 Union Street,Signature Menswear,occupied,24750,,,,,,TRUE,,Occupant and address confirmed locally,,
-osm-way-404999672,,way/404999672,355 Union Street,Yorkshire Building Society,occupied,19000,,,,,,TRUE,,Local occupancy check,,
-building-404999670-unit-363,osm-way-404999670,,363 Union Street,Vacant,not-on-market,,,,,,,TRUE,,Was Bruce Millers,,
-building-404999670-unit-365,osm-way-404999670,node/9108652079,365 Union Street,The Howff,occupied,32000,,,,,,TRUE,,Occupant and address confirmed locally,,
-building-404999677-unit-367-wild-ginger,osm-way-404999677,node/290633283,367 Union Street,Wild Ginger,occupied,40250,,,,,,TRUE,,Occupant confirmed locally; equal-sized frontage with Six by Nico and an aligned dividing edge,,
-building-404999677-unit-367-six-by-nico,osm-way-404999677,node/290633283,367 Union Street,Six by Nico,occupied,66000,,,,,,TRUE,,Occupant confirmed locally; equal-sized frontage with Wild Ginger and an aligned dividing edge,,
-building-404999674-unit-373,osm-way-404999674,node/9108652076,373 Union Street,Vacant,available,26750,2779,12867,30000,15.43,,TRUE,,Was Tony & Guy,Was Tony & Guy,FG Burnett
-building-404999674-unit-377,osm-way-404999674,node/11251877506,377 Union Street,Vacant,available,31500,4643,15152,30000,9.72,,TRUE,,Was Career Scotland,Was Careers Scotland,FG Burnett
-osm-way-723880540,,way/723880540,381–383 Union Street,Vacant,available,43500,10848,20924,40000,5.62,,TRUE,,Was Skills Development Scotland,Was Skills Development Scotland,Shepherd
-osm-way-723880539,,way/723880539,391 Union Street,Charles Michie,occupied,61500,,,,,,TRUE,,Local occupancy check,,
-building-723880538-unit-395,osm-way-723880538,node/11251877510,395 Union Street,Thistle Tavern,filled,29000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-building-723880538-unit-399,osm-way-723880538,node/9108652070,399 Union Street,"Raeburn, Christie, Clerk & Wallace",occupied,27750,,,,,,TRUE,,Occupant and address confirmed locally,,
-osm-way-404933580,,way/404933580,401–405 Union Street,Chilos Burgers,filled,,,,,,,TRUE,,Local occupancy check,,
-osm-way-404937886,,way/404937886,402–404 Union Street,PizzaExpress,occupied,36500,,,,,,TRUE,,Local occupancy check,,
-osm-way-404937891,,way/404937891,408–412 Union Street,Vacant,not-on-market,42500,,,,,,TRUE,,Was WH Smith,Was WH Smith - whole building sold recently,
-building-404933596-unit-409,osm-way-404933596,node/6055020650,409 Union Street,Jungle Berry,filled,31000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-building-404933596-unit-411,osm-way-404933596,node/6055020651,411 Union Street,Pure,occupied,21500,,,,,,TRUE,,Occupant and address confirmed locally,,
-osm-way-404937893,,way/404937893,414 Union Street,Vacant,available,28250,3584,13588,25000,10.77,,TRUE,,Was The Works,Was The Works,Ryden
-osm-way-404933591,,way/404933591,415 Union Street,Phone Fit,occupied,9200,,,,,,TRUE,,Local occupancy check,,
-osm-way-404933585,,way/404933585,419 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,
-osm-way-404937889,,way/404937889,420 Union Street,Aberdein Considine,occupied,45500,,,,,,TRUE,,Local occupancy check,,
-osm-way-404933595,,way/404933595,423–425 Union Street,Justice Mill,occupied,203000,,,,,,TRUE,,Local occupancy check,,
-osm-way-404937887,,way/404937887,424 Union Street,Aberdein Considine,occupied,45500,,,,,,TRUE,,Local occupancy check,,
-building-1215644296-unit-429,osm-way-1215644296,node/9111989553,429 Union Street,Stevensons,occupied,16750,,,,,,TRUE,,Occupied ground-floor retail unit; top-right cell on the Union Street frontage,,
-building-404937895-unit-432,osm-way-404937895,node/6054432441,432 Union Street,Gavin Bain & Co,occupied,36000,,,,,,TRUE,,Occupant and address confirmed locally; rear lobe removed and outline simplified while retaining the shared boundary with 434,,
-building-404937895-unit-434,osm-way-404937895,node/8917591516,434 Union Street,Sirene,occupied,20000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,
-osm-way-723566959,,way/723566959,440 Union Street,Vacant,not-on-market,20750,,,,,,TRUE,,Was Fit & Skin,,
-building-1215644296-unit-441,osm-way-1215644296,,441 Union Street,Vacant,available,23250,2069,11183,20000,15.07,,TRUE,,Was Am: Pm Leasing,Was AM:PM Leasing,Graham & Sibbald
-osm-way-723244778,,way/723244778,446 Union Street,Vacant,available,35500,3041,17076,50000,22.06,,TRUE,,Was Greggs,Was Greggs,Shepherd
-building-404937888-unit-450,osm-way-404937888,node/6054432439,450 Union Street,Collies Property,occupied,13750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,
-building-404937888-unit-452-456,osm-way-404937888,node/6054432438,452–456 Union Street,Caffè Nero,occupied,26500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,
-osm-way-404933583,,way/404933583,463–465 Union Street,Vacant,available,25250,4338,12575,35000,10.87,,TRUE,,Was Nationwide,Was Nationwide,FG Burnett
-osm-way-964078543,,way/964078543,464–466 Union Street,Cafe Society,occupied,11500,,,,,,TRUE,,Local occupancy check,,
-osm-way-404933584,,way/404933584,469–471 Union Street,Service Graphics,occupied,24000,,,,,,TRUE,,Local occupancy check,,
-osm-way-964078544,,way/964078544,470 Union Street,Vacant,being-occupied,43750,,,,,,TRUE,,Local occupancy check,,
-building-964078545-unit-472,osm-way-964078545,node/6054432433,472 Union Street,Aberdeen Whisky Shop,filled,17750,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-building-964078545-unit-474,osm-way-964078545,node/4786968822,474 Union Street,Cup,filled,9000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-building-404933589-unit-475,osm-way-404933589,,475 Union Street,Gamersheek,filled,39000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline; remaining parent area deselected,,
-building-964078545-unit-476,osm-way-964078545,node/1383400114,476 Union Street,The Everest,occupied,27250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing lines are provisional and orthogonal to the street frontage,,
-building-964078546-unit-478,osm-way-964078546,node/6054432432,478 Union Street,Johnsons Dry Cleaning,occupied,17750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,
-building-964078546-unit-484,osm-way-964078546,node/6054432435,484 Union Street,The Assessment Centre,occupied,45750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,
-osm-way-404933594,,way/404933594,489 Union Street,Vacant,not-on-market,16250,,,,,,TRUE,,Was Post Office,Was Post Office,
-osm-way-404938289,,way/404938289,492–494 Union Street,Sainsbury’s Local,occupied,45750,,,,,,TRUE,,Local occupancy check,,
-osm-way-404933592,,way/404933592,493 Union Street,Xpress Mobile,occupied,11500,,,,,,TRUE,,Local occupancy check,,
-building-404938286-unit-496,osm-way-404938286,node/6054668193,496 Union Street,Vacant,not-on-market,31250,,,,,,TRUE,,Was Starbucks,Was Starbucks,
-building-404938286-unit-500,osm-way-404938286,node/6054668192,500 Union Street,Kaizen,filled,35000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-osm-way-404933586,,way/404933586,501 Union Street,Tesco Express,occupied,75500,,,,,,TRUE,,Local occupancy check,,
-building-404938287-unit-504,osm-way-404938287,node/290629629,504 Union Street,Durty Murphys,filled,44500,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,
-building-404938287-unit-506-508,osm-way-404938287,node/6054473450,506–508 Union Street,Tulloch Recruitment,occupied,34000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing lines are provisional and orthogonal to the street frontage,,
-building-404938287-unit-510,osm-way-404938287,node/6054473449,510 Union Street,Duncan and Todd Opticians,occupied,27500,,,,,,TRUE,,Occupant confirmed locally; main 510 frontage retained and the smaller attached polygon deselected,,
-building-998896032-unit-514,osm-way-998896032,,514 Union Street,Belmont Kebab,occupied,6600,,,,,,TRUE,,Occupant confirmed locally; small triangular frontage between 510 and Social Bite,,
-building-998896032-unit-516,osm-way-998896032,,516 Union Street,Social Bite,occupied,10000,,,,,,TRUE,,Occupant confirmed locally; short rectangular frontage matching the 520 unit alignment,,
-building-998896032-unit-520,osm-way-998896032,,520 Union Street,Adder Freelance Studio,occupied,19500,,,,,,TRUE,,Occupant confirmed locally; rectangular frontage aligned with Social Bite,,
-osm-way-404925608,,way/404925608,230 Union Street,Skipton Building Society,occupied,26000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-404925609,,way/404925609,224 Union Street,Molly Malones,occupied,114000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-404925610,,way/404925610,214 Union Street,Centrum Aberdeen,occupied,11250,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-404925614,,way/404925614,218 Union Street,Smile Dental Care,occupied,21000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-1228297549,,way/1228297549,202 Union Street,British Heart Foundation,occupied,19500,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-1228297550,,way/1228297550,200 Union Street,Barnardos,occupied,19000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-1228297551,,way/1228297551,198 Union Street,Scott Mobile and Vape,occupied,20500,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-osm-way-1228297552,,way/1228297552,196  Union Street,Subway,occupied,18000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,
-trinity-northern-diamond,osm-way-132130886,,141 Union Street,Northern Diamond,occupied,28750,,,,,,FALSE,,Occupant and position confirmed locally; postal address to be confirmed,,
+﻿unit_id,parent_building_id,osm_id,address,occupant,status,rateable_value,area_sq_ft,annual_rates,annual_rent,arr_per_sq_ft,uprn,verified,verification_date,source_note,note,letting_agent,closure
+osm-way-1053169095,,way/1053169095,133-141 Union Street,Nationwide,occupied,85000,,,,,,FALSE,,OpenStreetMap snapshot · 18 September 2026,,,no
+osm-way-316663039,,way/316663039,1 Union Terrace,Chaophrya,occupied,91000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-316663042,,way/316663042,148 Union Street,Vacant,available,21250,2263,10221,25000,15.56,,FALSE,,Was Cleavin Barber,Was Cleavin' Barber,Shepherd,yes
+osm-way-404925607,,way/404925607,208 Union Street,Starbucks,occupied,43000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-404925611,,way/404925611,220 Union Street,Digby Brown,occupied,25750,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-1228297548,,way/1228297548,204 Union Street,Co-op Food,occupied,237000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+building-404583404-unit-1-3,osm-way-404583404,node/10090207379,1–3 Justice Street,Grade A Barbers,occupied,8400,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-313986638,,way/313986638,2–8 King Street,Gio’s by La Lombarda,occupied,47250,,,,,,TRUE,,Local occupancy check,,,no
+trinity-frontage-1,osm-way-132130886,node/11167737033,3–7 Union Bridge,Poundland,occupied,129000,,,,,,FALSE,,Occupant and address confirmed locally; frontage extent provisional,,,no
+osm-way-313974153,,way/313974153,4 Ship Row,Cash Converters,filled,21250,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-314561430,,way/314561430,5 Castle Street,The Archibald Simpson,occupied,192000,,,,,,FALSE,,OpenStreetMap east extension snapshot · 18 September 2026,,,no
+osm-way-1180776446,,way/1180776446,5–9 Union Street,BrewDog,occupied,98000,,,,,,TRUE,,Local occupancy check,,,no
+building-404583404-unit-7-9,osm-way-404583404,,7–9 Justice Street,Castlegate Collectibles,occupied,8600,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-404583405,,way/404583405,11 Castlegate,The Worm,occupied,,,,,,,TRUE,,Local occupancy check,,,no
+trinity-frontage-5,osm-way-132130886,node/2616367173,11 Union Bridge,HMV,occupied,110000,,,,,,FALSE,,Occupant and address confirmed locally; frontage extent provisional,,,no
+osm-way-404583408,,way/404583408,13 Castle Street,Siam Cottage,occupied,12000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404583399,,way/404583399,15 Castle Street,Aberdeen VR,occupied,10500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404583403,,way/404583403,17 Castle Street,Portals,occupied,14250,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1180776449,,way/1180776449,17 Union Street,Londis,occupied,12750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404583407,,way/404583407,19 Castle Street,Castle Bar,occupied,16000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1180776447,,way/1180776447,21 Union Street,Union Cafe & Bistro,occupied,16500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404583406,,way/404583406,22–23A Castle Street,Hea Bubble Tea,occupied,10750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-313943991,,way/313943991,25 Union Street,Bargain Deals Homeware & Hardware,filled,21750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-636120624,,way/636120624,26–30 Union Street,Miller & Carter,occupied,280000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-313943990,,way/313943990,27 Union Street,El Classico Barber,occupied,17500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-313943986,,way/313943986,31 Union Street,British Heart Foundation,occupied,16500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-314142354,,way/314142354,32 Castle Street,Carlton Bar,occupied,13750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-313943988,,way/313943988,33 Union Street,Phone Fix,occupied,10000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-314142349,,way/314142349,34 Castle Street,Vacant,not-on-market,11000,,,,,,TRUE,,Was Vegan Bakery,Was Vegan Bay Bakery,,no
+building-314142350-unit-36,osm-way-314142350,node/3201606789,36 Castle Street,VSA,occupied,,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-313943989,,way/313943989,37 Union Street,Premier Food Store,occupied,23500,,,,,,TRUE,,Local occupancy check,,,no
+building-314142350-unit-38,osm-way-314142350,node/3201606789,38 Castle Street,VSA,occupied,103000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-636141930,,way/636141930,38 Union Street,Estabulo,filled,80000,,,,,,TRUE,,OpenStreetMap and local occupancy check,,,no
+building-314020857-unit-39,osm-way-314020857,,39 Union Street,Annie Mo’s,occupied,52500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-636141927,,way/636141927,40–42 Union Street,Optical Express,occupied,45250,,,,,,TRUE,,Local occupancy check,,,no
+building-314020857-unit-43-45,osm-way-314020857,node/9180783767,43–45 Union Street,Tesco Express,occupied,89000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-636141926,,way/636141926,44 Union Street,Outfits,occupied,17250,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-314142346,,way/314142346,45 Castle Street,Mercat Bookshop,occupied,,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-314142347,,way/314142347,46 Castle Street,VSA,occupied,20500,,,,,,TRUE,,Local occupancy check,,,no
+building-636141916-unit-46,osm-way-636141916,,46 Union Street,Entertainment Exchange,occupied,26750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-314020861,,way/314020861,47 Union Street,Union Barbers,filled,15250,,,,,,TRUE,,Local occupancy check,,,no
+building-636141916-unit-48,osm-way-636141916,node/11179531182,48 Union Street,William Hill,occupied,20750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-314142348,,way/314142348,49 Castle Street,Skynails and Spa,occupied,9100,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-314020851,,way/314020851,49 Union Street,Fone Spot,occupied,20750,,,,,,TRUE,,Local occupancy check,,,no
+building-636141916-unit-50,osm-way-636141916,node/11179531183,50 Union Street,Ladbrokes,occupied,23500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+building-314020864-unit-51,osm-way-314020864,node/9180783770,51 Union Street,VPZ,occupied,17250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-314142355,,way/314142355,52 Castlegate,Old Blackfriars,occupied,50000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-636141922,,way/636141922,52–54 Union Street,Vacant,available,50000,4661,24050,75000,21.25,,TRUE,,Was Halifax,Was Halifax Bank,CBRE,yes
+building-314020864-unit-53,osm-way-314020864,,53 Union Street,Mister C’s,filled,19750,,,,,,TRUE,,Occupant and address confirmed locally; filled since the project baseline,,,no
+osm-way-314021127,,way/314021127,55 Union Street,Greggs,occupied,24000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404609507,,way/404609507,55–56 Castle Street,The Tilted Wig,occupied,14000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-636141923,,way/636141923,56–58 Union Street,Specsavers,occupied,27500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-314021129,,way/314021129,57 Union Street,Evans Cycles,occupied,64500,,,,,,TRUE,,Local occupancy check,,,no
+building-314021130-unit-59,osm-way-314021130,,59 Union Street,Vacant,available,26000,11363,12506,40000,4.62,,TRUE,,Was World Buffet,Was World Buffet,Sims Property,no
+osm-way-636141921,,way/636141921,60–62 Union Street,Virgin Money,occupied,89000,,,,,,TRUE,,Local occupancy check,,,no
+building-314021130-unit-61-63,osm-way-314021130,node/3201301965,61–63 Union Street,Sports Direct,occupied,86000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-314113012,,way/314113012,73 Union Street,Black Sheep Coffee,filled,55000,,,,,,TRUE,,Local occupancy check,,,yes
+osm-way-314113011,,way/314113011,78–80 Union Street,Vacant,not-on-market,,,,,,,TRUE,,Was RBS,,,no
+osm-way-314113007,,way/314113007,81 Union Street,Vacant,not-on-market,18750,,,,,,TRUE,,Was Lush,"Was Lush, owned by ACC",,no
+building-314113005-unit-82,osm-way-314113005,node/11181858059,82 Union Street,Pro Mobile,occupied,22000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-314113004,,way/314113004,85 Union Street,Vacant,not-on-market,33250,,,,,,TRUE,,Was Dizzy's,"Was Dizzy's, ownded by ACC",,yes
+building-314113005-unit-86,osm-way-314113005,node/5040921221,86 Union Street,Timpson,occupied,19500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+osm-way-1204758026,,way/1204758026,87 Union Street,Vacant,not-on-market,41000,,,,,,TRUE,,Was Attic,"Was Attic, owned by ACC",,yes
+building-314113010-unit-88,osm-way-314113010,,88 Union Street,Vacant,available,20000,861,9620,25000,37.31,,TRUE,,Was H Samuel,Was McGowan's Jewellers,Breck & Landed,no
+building-314113010-unit-92,osm-way-314113010,,92 Union Street,Vacant,available,34500,1321,16595,40000,42.84,,TRUE,,Was Phone Shop,Was Vodaphone,Breck & Landed,no
+osm-way-314113008,,way/314113008,95–99 Union Street,HSBC,occupied,100000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-314113009,,way/314113009,98 Union Street,Vacant,available,32250,992,15512,37500,53.44,,TRUE,,Was O2,Was O2,Breck & Landed,no
+osm-way-314113003,,way/314113003,100 Union Street,Peterkins,occupied,98000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1204758028,,way/1204758028,101–103 Union Street,Aberdeen Vinyl,occupied,47000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-314113013,,way/314113013,104 Union Street,iCrack,occupied,10750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1204758029,,way/1204758029,105 Union Street,The Highlander,occupied,36500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-316910796,,way/316910796,107 Union Street,Vacant,available,46000,2406,22126,50000,29.98,,TRUE,,Local occupancy check,Was JD Sports,Culverwell,no
+osm-way-1204758031,,way/1204758031,111 Union Street,Popeyes,filled,69000,,,,,,TRUE,,Local occupancy check,,,no
+building-314091333-unit-114-116,osm-way-314091333,node/11143918499,"114–116 Union Street, AB10 1JJ",Beaverbrooks,occupied,34250,,,,,,FALSE,,Occupant and address from OSM; OSM address typo corrected from 114–1166; internal dividing line is provisional,,,no
+osm-way-1053169097,,way/1053169097,117 Union Street,McDonald’s,occupied,77500,,,,,,TRUE,,Local occupancy check,,,no
+building-314091333-unit-118,osm-way-314091333,node/11143918498,"118 Union Street, AB10 1JJ",German Döner Kebab,filled,29250,,,,,,FALSE,,Occupant and address confirmed locally; western edge shared with 120 without overlap,,,no
+building-314091334-unit-120,osm-way-314091334,,120 Union Street,Arcadia,filled,43750,,,,,,TRUE,,Occupied unit confirmed locally; dividing edge parallel to the wall alongside 122A,,,no
+building-404572403-unit-121,osm-way-404572403,node/11110519665,121 Union Street,Poundworld,occupied,35250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+building-314091334-unit-122,osm-way-314091334,,122 Union Street,Bargain Buys,occupied,88000,,,,,,TRUE,,Occupied unit confirmed locally; shared edge parallel to the wall alongside 122A,,,no
+building-314091321-unit-122a,osm-way-314091321,node/4590032224,"122A Union Street, AB10 1JJ",Adams Watch Specialist,occupied,20250,,,,,,FALSE,,Occupant and address from OSM; eastern edge shared with 122 without overlap,,,no
+building-404572403-unit-123,osm-way-404572403,node/8872620353,123 Union Street,Taco Bell,occupied,32500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
+building-404572401-unit-125-union-worx,osm-way-404572401,,125 Union Street,Union Worx,filled,,,,,,,TRUE,,Narrower unit confirmed locally; filled since the project baseline,,,no
+building-404572401-unit-125-cancer-research,osm-way-404572401,node/8872620352,125 Union Street,Cancer Research UK,occupied,36000,,,,,,TRUE,,Wider occupied unit confirmed locally; dividing edge aligned with the building side walls,,,no
+osm-way-1204758034,,way/1204758034,127 Union Street,"Mobiles, Gadgets and Vapes",occupied,32500,,,,,,TRUE,,Local occupancy check,,,no
+building-314091321-unit-128,osm-way-314091321,node/4590032223,"128 Union Street, AB10 1JJ",Ramsdens,occupied,19250,,,,,,FALSE,,Occupant and address from OSM; internal dividing line is provisional,,,no
+building-314091322-unit-130,osm-way-314091322,,"130 Union Street, AB10 1JJ",Vacant,being-occupied,16500,,,,,,FALSE,,Address and vacancy from OSM; internal dividing line is provisional,Was McColls - plans for beauty salon,,no
+osm-way-404572404,,way/404572404,131 Union Street,Refill Station,occupied,26750,,,,,,TRUE,,Local occupancy check,,,no
+building-314091322-unit-132,osm-way-314091322,node/11143918501,"132 Union Street, AB10 1JJ",TAG Heuer,filled,28250,,,,,,FALSE,,Occupant and address from OSM; internal dividing line is provisional,,,no
+building-314776718-unit-west,osm-way-314776718,,140 Union Street,Rolex,filled,106000,,,,,,TRUE,,Eastern unit; occupant and address confirmed locally; filled since the project baseline,,,no
+building-314776718-unit-east,osm-way-314776718,node/4590032219,142 Union Street,Jamieson & Carry,occupied,106000,,,,,,TRUE,,Western unit; occupant and address confirmed locally,,,no
+trinity-frontage-3,osm-way-132130886,node/11167737018,143–149 Union Street,Primark,occupied,230000,,,,,,FALSE,,Occupant and address from OSM; frontage extent provisional,,,no
+osm-way-316663047,,way/316663047,150 Union Street,Vacant,being-occupied,65000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,Was MOKA Bar - new restaurant & bar opening soon,,no
+osm-relation-16795469,,relation/16795469,152 Union Street,KFC,occupied,34750,,,,,,TRUE,,OpenStreetMap and local occupancy check,,,no
+osm-way-404969663,,way/404969663,154 Union Street,Lakeland,occupied,44000,,,,,,TRUE,,Local occupancy check,,,no
+trinity-frontage-2,osm-way-132130886,node/13240579844,155 Union Street,Vacant,being-occupied,,,,,,,FALSE,,Address and vacancy status confirmed locally; frontage extent provisional,"Was Chopstix, plan for Mezzo Restaurant",,yes
+osm-way-404969668,,way/404969668,156 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,,no
+bridge-frontage-1,osm-way-378937853,,157–159 Union Street,Vacant,available,42750,2450,20563,40000,24.72,,FALSE,,Was Millets,Was Millets,Graham & Sibbald,yes
+osm-way-404969660,,way/404969660,160–162 Union Street,Caffè Nero,occupied,41000,,,,,,TRUE,,Local occupancy check,,,no
+bridge-frontage-2,osm-way-378937853,node/6036096495,161 Union Street,Greggs,occupied,64500,,,,,,FALSE,,Occupant and address confirmed locally; frontage extent provisional,,,no
+bridge-frontage-3,osm-way-378937853,node/290633298,163–165 Union Street,Barclays,occupied,74500,,,,,,FALSE,,Occupant and address confirmed locally; frontage extent provisional,,,no
+building-404969666-unit-164,osm-way-404969666,node/4590032277,164 Union Street,The Noodle Library,filled,21750,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,no
+building-404969666-unit-166,osm-way-404969666,node/6053234934,166 Union Street,The Fade Factory,occupied,12250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,,no
+osm-way-404613675,,way/404613675,167 Union Street,Vacant,not-on-market,39500,,,,,,TRUE,,Was Sally Beauty,Was Sally Beauty - not yet on market,,yes
+osm-way-404613671,,way/404613671,171 Union Street,Santander,occupied,45250,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404969655,,way/404969655,172 Union Street,Vacant,filled,45750,5576,22006,60000,14.71,,TRUE,,Was Flight Centre,,,no
+osm-way-404613672,,way/404613672,175 Union Street,Paddy Power,occupied,22750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1214150370,,way/1214150370,177 Union Street,Game District,filled,23750,,,,,,TRUE,,Local occupancy check,,,no
+building-404613674-unit-181,osm-way-404613674,node/11249160680,181 Union Street,MERKUR Slots,occupied,39250,,,,,,TRUE,,Occupant and address confirmed locally; top-right frontage between Coral and Game District,,,no
+building-404613674-unit-181b,osm-way-404613674,node/11249160681,181B Union Street,Coral,occupied,20250,,,,,,TRUE,,Occupant and address confirmed locally; top-left frontage immediately adjacent to Ann Summers,,,no
+osm-way-1214150371,,way/1214150371,183 Union Street,Ann Summers,occupied,39250,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1214150373,,way/1214150373,185 Union Street,Ultra Mobile,occupied,15250,,,,,,TRUE,,Local occupancy check,,,no
+building-1121522334-unit-187,osm-way-1121522334,node/7571564793,187 Union Street,Edinburgh Woollen Mill,occupied,24500,,,,,,TRUE,,Occupant and address confirmed locally; wider unit above the narrow 189 boundary strip,,,no
+building-1121522334-unit-189,osm-way-1121522334,,189 Union Street,Vacant,being-occupied,27250,,,,,,TRUE,,Vacancy and address confirmed locally; narrow unit running alongside the British Red Cross boundary,,,no
+building-404613677-unit-191,osm-way-404613677,node/6038966374,191 Union Street,British Red Cross,occupied,29250,,,,,,TRUE,,Occupant and address confirmed locally; dividing line aligned with the neighbouring frontage boundaries,,,no
+building-404613677-unit-195,osm-way-404613677,node/6038966358,195 Union Street,PDSA,filled,36500,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,no
+osm-way-404613676,,way/404613676,201 Union Street,Glenhouse,filled,53000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1228297547,,way/1228297547,206A Union Street,Heavenly Desserts,filled,25750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1228297546,,way/1228297546,206B Union Street,Oodles Noodles,filled,19500,,,,,,TRUE,,Local occupancy check,,,no
+building-404573530-unit-207a,osm-way-404573530,node/11251451421,207A Union Street,Vacant,available,16750,1441,8057,22000,20.86,,TRUE,,Was Newsbox,Was Newsbox,Mark Halliday,no
+osm-way-404573533,,way/404573533,209 Union Street,Ladbrokes,occupied,22750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1214383276,,way/1214383276,213 Union Street,The Grill,occupied,63500,,,,,,TRUE,,Local occupancy check,,,no
+building-404573532-unit-215,osm-way-404573532,node/9106209441,215 Union Street,Silvan Mobile Repair,occupied,15750,,,,,,TRUE,,Occupant and address confirmed locally; frontage beside The Grill,,,no
+building-404573532-unit-217,osm-way-404573532,node/9106209440,217 Union Street,Dark Fade,occupied,20250,,,,,,TRUE,,Occupant and address confirmed locally; side-by-side frontage with Silvan Mobile Repair,,,no
+building-1214395880-unit-221,osm-way-1214395880,node/290633292,221 Union Street,Vacant,not-on-market,47250,,,,,,TRUE,,Was MHA,,,no
+building-1214395880-unit-225,osm-way-1214395880,node/11251612971,225 Union Street,Vacant,not-on-market,16500,,,,,,TRUE,,Was MHA,,,no
+osm-way-404925613,,way/404925613,226 Union Street,Lolo & Co,filled,24250,,,,,,TRUE,,Local occupancy check,,,no
+building-1214395880-unit-227,osm-way-1214395880,node/11251612972,227 Union Street,Vacant,not-on-market,19000,,,,,,TRUE,,Was MHA,,,no
+osm-way-1214395881,,way/1214395881,229 Union Street,Chaiwala,filled,29750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1214395882,,way/1214395882,231 Union Street,Vacant,available,21500,2616,10342,30000,15.42,,TRUE,,Was MHA,Was MHA Charity Shop,Shepherd,no
+building-643330736-unit-234,osm-way-643330736,node/3502766632,234 Union Street,Pret A Manger,occupied,45250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,,no
+building-643330736-unit-236,osm-way-643330736,node/6054432449,236 Union Street,British Heart Foundation Home Store,occupied,51000,,,,,,TRUE,,Occupant and address from OSM; internal dividing line is provisional and orthogonal to the street frontage,,,no
+osm-way-1214395883,,way/1214395883,247 Union Street,Cruise,occupied,61500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-723877506,,way/723877506,248 Union Street,The Mortgage & Property Centre,occupied,30000,,,,,,TRUE,,Local occupancy check,,,no
+building-723877512-unit-250,osm-way-723877512,node/9048154294,250 Union Street,Grampian Credit Union,occupied,28500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing lines are provisional and orthogonal to the street frontage,,,no
+building-723877512-unit-252a,osm-way-723877512,node/8917189492,252A Union Street,Seventh Heaven,filled,13250,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,no
+building-723877512-unit-252b,osm-way-723877512,node/12645369272,252B Union Street,Poke Me Nails,filled,10000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,no
+osm-way-723877510,,way/723877510,254 Union Street,Vovem,occupied,78000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1214395884,,way/1214395884,255 Union Street,Vaping 101,occupied,33750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-723877509,,way/723877509,256 Union Street,Signature 2,occupied,26000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1214395887,,way/1214395887,257–259 Union Street,Amarone,occupied,76000,,,,,,TRUE,,Local occupancy check,,,no
+building-1214395888-unit-261,osm-way-1214395888,node/9106209428,261 Union Street,Vacant,available,32500,4138,15633,40000,13.44,,TRUE,,Was SK:N,Was SK:N Clinic,Graham & Sibbald,yes
+osm-way-723877508,,way/723877508,262 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,,no
+building-1214395888-unit-263,osm-way-1214395888,node/11251612995,263 Union Street,Gidi Grill,occupied,48250,,,,,,TRUE,,Occupant and address confirmed locally; dividing edge aligned with the neighbouring unit boundaries,,,yes
+osm-way-723877507,,way/723877507,264 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-1214395889,,way/1214395889,267 Union Street,Trailfinders,occupied,24000,,,,,,TRUE,,Local occupancy check,,,no
+building-1214395890-unit-269,osm-way-1214395890,node/9106209425,269 Union Street,So NYC Bagels & Brew,occupied,42750,,,,,,TRUE,,Occupant and address confirmed locally; footprint mirrors Trailfinders across their shared boundary,,,no
+building-463771008-unit-333,osm-way-463771008,node/290633287,333 Union Street,Soul,occupied,240000,,,,,,TRUE,,Occupant confirmed locally; boundary with 335 aligned to the block's unit edges,,,no
+building-404999671-unit-335,osm-way-404999671,node/4583086890,335 Union Street,Vacant,being-occupied,29250,,,,,,TRUE,,Being-filled vacancy confirmed locally; both side boundaries aligned to the block's unit edges,"Was Thomas Cook, plans for new restaurant",,no
+building-404999673-unit-339,osm-way-404999673,node/9106209422,339 Union Street,Ba Bai Cafe,filled,25000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,yes
+building-404999673-unit-345,osm-way-404999673,node/11251877485,345 Union Street,Social Monkey,filled,36250,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,no
+building-404999676-unit-347,osm-way-404999676,node/9106209421,347 Union Street,8848,occupied,31250,,,,,,TRUE,,Occupant and address confirmed locally,,,no
+building-404999676-unit-349,osm-way-404999676,node/9106209420,349 Union Street,Signature Menswear,occupied,24750,,,,,,TRUE,,Occupant and address confirmed locally,,,no
+osm-way-404999672,,way/404999672,355 Union Street,Yorkshire Building Society,occupied,19000,,,,,,TRUE,,Local occupancy check,,,no
+building-404999670-unit-363,osm-way-404999670,,363 Union Street,Vacant,not-on-market,,,,,,,TRUE,,Was Bruce Millers,,,no
+building-404999670-unit-365,osm-way-404999670,node/9108652079,365 Union Street,The Howff,occupied,32000,,,,,,TRUE,,Occupant and address confirmed locally,,,no
+building-404999677-unit-367-wild-ginger,osm-way-404999677,node/290633283,367 Union Street,Wild Ginger,occupied,40250,,,,,,TRUE,,Occupant confirmed locally; equal-sized frontage with Six by Nico and an aligned dividing edge,,,no
+building-404999677-unit-367-six-by-nico,osm-way-404999677,node/290633283,367 Union Street,Six by Nico,occupied,66000,,,,,,TRUE,,Occupant confirmed locally; equal-sized frontage with Wild Ginger and an aligned dividing edge,,,no
+building-404999674-unit-373,osm-way-404999674,node/9108652076,373 Union Street,Vacant,available,26750,2779,12867,30000,15.43,,TRUE,,Was Tony & Guy,Was Tony & Guy,FG Burnett,no
+building-404999674-unit-377,osm-way-404999674,node/11251877506,377 Union Street,Vacant,available,31500,4643,15152,30000,9.72,,TRUE,,Was Career Scotland,Was Careers Scotland,FG Burnett,yes
+osm-way-723880540,,way/723880540,381–383 Union Street,Vacant,available,43500,10848,20924,40000,5.62,,TRUE,,Was Skills Development Scotland,Was Skills Development Scotland,Shepherd,no
+osm-way-723880539,,way/723880539,391 Union Street,Charles Michie,occupied,61500,,,,,,TRUE,,Local occupancy check,,,no
+building-723880538-unit-395,osm-way-723880538,node/11251877510,395 Union Street,Thistle Tavern,filled,29000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,no
+building-723880538-unit-399,osm-way-723880538,node/9108652070,399 Union Street,"Raeburn, Christie, Clerk & Wallace",occupied,27750,,,,,,TRUE,,Occupant and address confirmed locally,,,no
+osm-way-404933580,,way/404933580,401–405 Union Street,Chilos Burgers,filled,,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404937886,,way/404937886,402–404 Union Street,PizzaExpress,occupied,36500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404937891,,way/404937891,408–412 Union Street,Vacant,not-on-market,42500,,,,,,TRUE,,Was WH Smith,Was WH Smith - whole building sold recently,,yes
+building-404933596-unit-409,osm-way-404933596,node/6055020650,409 Union Street,Jungle Berry,filled,31000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,yes
+building-404933596-unit-411,osm-way-404933596,node/6055020651,411 Union Street,Pure,occupied,21500,,,,,,TRUE,,Occupant and address confirmed locally,,,no
+osm-way-404937893,,way/404937893,414 Union Street,Vacant,available,28250,3584,13588,25000,10.77,,TRUE,,Was The Works,Was The Works,Ryden,no
+osm-way-404933591,,way/404933591,415 Union Street,Phone Fit,occupied,9200,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404933585,,way/404933585,419 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404937889,,way/404937889,420 Union Street,Aberdein Considine,occupied,45500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404933595,,way/404933595,423–425 Union Street,Justice Mill,occupied,203000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404937887,,way/404937887,424 Union Street,Aberdein Considine,occupied,45500,,,,,,TRUE,,Local occupancy check,,,no
+building-1215644296-unit-429,osm-way-1215644296,node/9111989553,429 Union Street,Stevensons,occupied,16750,,,,,,TRUE,,Occupied ground-floor retail unit; top-right cell on the Union Street frontage,,,no
+building-404937895-unit-432,osm-way-404937895,node/6054432441,432 Union Street,Gavin Bain & Co,occupied,36000,,,,,,TRUE,,Occupant and address confirmed locally; rear lobe removed and outline simplified while retaining the shared boundary with 434,,,no
+building-404937895-unit-434,osm-way-404937895,node/8917591516,434 Union Street,Sirene,occupied,20000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,,no
+osm-way-723566959,,way/723566959,440 Union Street,Vacant,not-on-market,20750,,,,,,TRUE,,Was Fit & Skin,,,yes
+building-1215644296-unit-441,osm-way-1215644296,,441 Union Street,Vacant,available,23250,2069,11183,20000,15.07,,TRUE,,Was Am: Pm Leasing,Was AM:PM Leasing,Graham & Sibbald,yes
+osm-way-723244778,,way/723244778,446 Union Street,Vacant,available,35500,3041,17076,50000,22.06,,TRUE,,Was Greggs,Was Greggs,Shepherd,no
+building-404937888-unit-450,osm-way-404937888,node/6054432439,450 Union Street,Collies Property,occupied,13750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,,no
+building-404937888-unit-452-456,osm-way-404937888,node/6054432438,452–456 Union Street,Caffè Nero,occupied,26500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,,no
+osm-way-404933583,,way/404933583,463–465 Union Street,Vacant,available,25250,4338,12575,35000,10.87,,TRUE,,Was Nationwide,Was Nationwide,FG Burnett,no
+osm-way-964078543,,way/964078543,464–466 Union Street,Cafe Society,occupied,11500,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404933584,,way/404933584,469–471 Union Street,Service Graphics,occupied,24000,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-964078544,,way/964078544,470 Union Street,Vacant,being-occupied,43750,,,,,,TRUE,,Local occupancy check,,,no
+building-964078545-unit-472,osm-way-964078545,node/6054432433,472 Union Street,Aberdeen Whisky Shop,filled,17750,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,no
+building-964078545-unit-474,osm-way-964078545,node/4786968822,474 Union Street,Cup,filled,9000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,no
+building-404933589-unit-475,osm-way-404933589,,475 Union Street,Gamersheek,filled,39000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline; remaining parent area deselected,,,no
+building-964078545-unit-476,osm-way-964078545,node/1383400114,476 Union Street,The Everest,occupied,27250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing lines are provisional and orthogonal to the street frontage,,,no
+building-964078546-unit-478,osm-way-964078546,node/6054432432,478 Union Street,Johnsons Dry Cleaning,occupied,17750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,,no
+building-964078546-unit-484,osm-way-964078546,node/6054432435,484 Union Street,The Assessment Centre,occupied,45750,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional and orthogonal to the street frontage,,,no
+osm-way-404933594,,way/404933594,489 Union Street,Vacant,not-on-market,16250,,,,,,TRUE,,Was Post Office,Was Post Office,,no
+osm-way-404938289,,way/404938289,492–494 Union Street,Sainsbury’s Local,occupied,45750,,,,,,TRUE,,Local occupancy check,,,no
+osm-way-404933592,,way/404933592,493 Union Street,Xpress Mobile,occupied,11500,,,,,,TRUE,,Local occupancy check,,,no
+building-404938286-unit-496,osm-way-404938286,node/6054668193,496 Union Street,Vacant,not-on-market,31250,,,,,,TRUE,,Was Starbucks,Was Starbucks,,yes
+building-404938286-unit-500,osm-way-404938286,node/6054668192,500 Union Street,Kaizen,filled,35000,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,yes
+osm-way-404933586,,way/404933586,501 Union Street,Tesco Express,occupied,75500,,,,,,TRUE,,Local occupancy check,,,no
+building-404938287-unit-504,osm-way-404938287,node/290629629,504 Union Street,Durty Murphys,filled,44500,,,,,,TRUE,,Occupant confirmed locally; filled since the project baseline,,,no
+building-404938287-unit-506-508,osm-way-404938287,node/6054473450,506–508 Union Street,Tulloch Recruitment,occupied,34000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing lines are provisional and orthogonal to the street frontage,,,no
+building-404938287-unit-510,osm-way-404938287,node/6054473449,510 Union Street,Duncan and Todd Opticians,occupied,27500,,,,,,TRUE,,Occupant confirmed locally; main 510 frontage retained and the smaller attached polygon deselected,,,no
+building-998896032-unit-514,osm-way-998896032,,514 Union Street,Belmont Kebab,occupied,6600,,,,,,TRUE,,Occupant confirmed locally; small triangular frontage between 510 and Social Bite,,,no
+building-998896032-unit-516,osm-way-998896032,,516 Union Street,Social Bite,occupied,10000,,,,,,TRUE,,Occupant confirmed locally; short rectangular frontage matching the 520 unit alignment,,,no
+building-998896032-unit-520,osm-way-998896032,,520 Union Street,Adder Freelance Studio,occupied,19500,,,,,,TRUE,,Occupant confirmed locally; rectangular frontage aligned with Social Bite,,,no
+osm-way-404925608,,way/404925608,230 Union Street,Skipton Building Society,occupied,26000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-404925609,,way/404925609,224 Union Street,Molly Malones,occupied,114000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-404925610,,way/404925610,214 Union Street,Centrum Aberdeen,occupied,11250,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-404925614,,way/404925614,218 Union Street,Smile Dental Care,occupied,21000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-1228297549,,way/1228297549,202 Union Street,British Heart Foundation,occupied,19500,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-1228297550,,way/1228297550,200 Union Street,Barnardos,occupied,19000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-1228297551,,way/1228297551,198 Union Street,Scott Mobile and Vape,occupied,20500,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+osm-way-1228297552,,way/1228297552,196  Union Street,Subway,occupied,18000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
+trinity-northern-diamond,osm-way-132130886,,141 Union Street,Northern Diamond,occupied,28750,,,,,,FALSE,,Occupant and position confirmed locally; postal address to be confirmed,,,no

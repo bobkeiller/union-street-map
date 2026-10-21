@@ -8,7 +8,7 @@ const expectedHeaders = [
   'unit_id', 'parent_building_id', 'osm_id', 'address', 'occupant', 'status',
   'rateable_value', 'area_sq_ft', 'annual_rates', 'annual_rent',
   'arr_per_sq_ft', 'uprn', 'verified', 'verification_date', 'source_note', 'note',
-  'letting_agent'
+  'letting_agent', 'closure'
 ];
 const statuses = new Set([
   'occupied', 'filled', 'occupied-to-let', 'available', 'not-on-market',
@@ -83,6 +83,9 @@ for (const [offset, row] of records.entries()) {
   }
   if (record.letting_agent && !marketedStatuses.has(record.status)) {
     errors.push(`Line ${line}: letting_agent is only allowed for a vacant or occupied-to-let property.`);
+  }
+  if (!/^(yes|no)$/i.test(record.closure)) {
+    errors.push(`Line ${line}: closure must be yes or no.`);
   }
   if (record.verified && !/^(true|false)$/i.test(record.verified)) {
     errors.push(`Line ${line}: verified must be TRUE or FALSE.`);

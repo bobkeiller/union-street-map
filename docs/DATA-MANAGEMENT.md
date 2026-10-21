@@ -19,11 +19,13 @@ reuse, or delete an existing `unit_id` as part of a routine information update.
 7. For a vacant property, add an optional public-facing `note` when useful.
 8. For a vacant or `occupied-to-let` property, add the `letting_agent` when
    known.
-9. Save as UTF-8 CSV, keeping the existing column headings.
-10. Double-click `Publish Unit Updates.command` in Finder.
-11. Review the validation result and the displayed changes.
-12. Enter a concise description and confirm publication.
-13. After GitHub Pages deploys, inspect the changed unit, status totals, and
+9. Keep `closure` as `yes` for a unit that has closed since March 2023, even if
+   it has subsequently been filled.
+10. Save as UTF-8 CSV, keeping the existing column headings.
+11. Double-click `Publish Unit Updates.command` in Finder.
+12. Review the validation result and the displayed changes.
+13. Enter a concise description and confirm publication.
+14. After GitHub Pages deploys, inspect the changed unit, status totals, and
     details panel on the live site.
 
 The publishing command commits and pushes only `data/union-street-units.csv`.
@@ -69,6 +71,7 @@ Do not enter alternatives such as `vacant`, `to let`, or capitalised versions.
 | `source_note` | Concise evidence or maintenance note suitable for publication. |
 | `note` | Optional public-facing note shown only in vacant-property pop-ups. |
 | `letting_agent` | Letting agent shown for vacant and `occupied-to-let` properties. |
+| `closure` | `yes` if the unit has closed since March 2023; otherwise `no`. |
 
 Blank financial fields display as not recorded. Do not put commentary such as
 `unknown` into numeric fields; leave them blank and explain in `source_note`.
@@ -79,6 +82,18 @@ it blank for occupied properties and when there is nothing useful to add.
 
 Enter the public-facing business name in `letting_agent`. Leave it blank when
 the agent is unknown. The pop-up will display “Not recorded” in that case.
+
+The `closure` flag is permanent historical information. Do not change it back
+to `no` when a unit is filled. The Project Progress panel calculates the March
+2023 comparison as follows:
+
+```text
+Occupied then = Occupied now - Filled + Closures
+Vacant then   = Vacant now + Filled - Closures
+```
+
+A unit that closed and was later filled is counted in both measures, so those
+two changes cancel when reconstructing the March 2023 occupied/vacant totals.
 
 ## Structural changes
 
