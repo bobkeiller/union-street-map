@@ -16,11 +16,14 @@ reuse, or delete an existing `unit_id` as part of a routine information update.
 4. Set `verified` to `TRUE` when the information has been checked.
 5. Record `verification_date` as `YYYY-MM-DD`.
 6. Add a concise `source_note` without including confidential information.
-7. Save as UTF-8 CSV, keeping the existing column headings.
-8. Double-click `Publish Unit Updates.command` in Finder.
-9. Review the validation result and the displayed changes.
-10. Enter a concise description and confirm publication.
-11. After GitHub Pages deploys, inspect the changed unit, status totals, and
+7. For a vacant property, add an optional public-facing `note` when useful.
+8. For a vacant or `occupied-to-let` property, add the `letting_agent` when
+   known.
+9. Save as UTF-8 CSV, keeping the existing column headings.
+10. Double-click `Publish Unit Updates.command` in Finder.
+11. Review the validation result and the displayed changes.
+12. Enter a concise description and confirm publication.
+13. After GitHub Pages deploys, inspect the changed unit, status totals, and
     details panel on the live site.
 
 The publishing command commits and pushes only `data/union-street-units.csv`.
@@ -64,9 +67,18 @@ Do not enter alternatives such as `vacant`, `to let`, or capitalised versions.
 | `verified` | `TRUE` or `FALSE`. |
 | `verification_date` | Use `YYYY-MM-DD`, or leave blank if unverified. |
 | `source_note` | Concise evidence or maintenance note suitable for publication. |
+| `note` | Optional public-facing note shown only in vacant-property pop-ups. |
+| `letting_agent` | Letting agent shown for vacant and `occupied-to-let` properties. |
 
 Blank financial fields display as not recorded. Do not put commentary such as
 `unknown` into numeric fields; leave them blank and explain in `source_note`.
+
+Keep `note` concise and suitable for the public website. Use it for information
+that helps explain a vacancy, such as refurbishment or marketing context. Leave
+it blank for occupied properties and when there is nothing useful to add.
+
+Enter the public-facing business name in `letting_agent`. Leave it blank when
+the agent is unknown. The pop-up will display “Not recorded” in that case.
 
 ## Structural changes
 

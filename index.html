@@ -37,6 +37,8 @@
     .property-fields dd{min-width:0;margin:0;font-weight:650;overflow-wrap:anywhere}
     .property-fields code{font-size:.76rem;font-weight:500}
     .not-recorded{color:#7a8580;font-weight:500!important;font-style:italic}
+    .property-note{margin:2px 0 0!important;padding:11px 12px;border-left:4px solid var(--available);border-radius:6px;background:#f8f3df;color:var(--ink)!important}
+    .property-note strong{display:block;margin-bottom:3px}
     .osm-records{display:grid;gap:8px;margin:8px 0}
     .osm-record{padding:9px 10px;background:#f1f5f2;border-left:4px solid #6f9a7e;border-radius:6px}
     .osm-record strong,.osm-record span{display:block}
@@ -350,17 +352,20 @@
       }
       function renderPropertyCard(p){
         const vacant=['available','not-on-market','being-occupied'].includes(p.status);
+        const marketed=vacant||p.status==='occupied-to-let';
         const title=vacant?'Vacant':p.name||p.buildingName||'Occupant not recorded';
         const address=p.address||p.displayAddress||'Address not recorded';
         const statusLabel=labels[p.status]||p.status||'Status not recorded';
         const rateableValue=propertyValue(p,['rateableValue','rateable_value','rv'],'currency');
-        const vacancyFields=vacant?sectionHtml('Vacancy information',[
+        const vacancyFields=marketed?sectionHtml('Vacancy information',[
           ['Area',propertyValue(p,['areaSqFt','area_sq_ft','area'],'area')],
           ['Rates',propertyValue(p,['rates','annualRates','annual_rates'],'annual')],
           ['Rent',propertyValue(p,['rent','annualRent','annual_rent'],'annual')],
-          ['AR&R / sq ft',propertyValue(p,['arrPerSqFt','arr_per_sq_ft','arrSqFt'],'perSqFt')]
+          ['AR&R / sq ft',propertyValue(p,['arrPerSqFt','arr_per_sq_ft','arrSqFt'],'perSqFt')],
+          ['Letting Agent',propertyValue(p,['lettingAgent','letting_agent'])]
         ]):'';
-        details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}`;
+        const noteHtml=vacant&&p.note?`<p class="property-note"><strong>Note:</strong>${escapeHtml(p.note)}</p>`:'';
+        details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}${noteHtml}`;
         details.hidden=false;
         details.querySelector('.close').addEventListener('click',()=>clearSelection(true));
       }
@@ -439,6 +444,8 @@
             if(status)p.status=status;
             if(record.uprn)p.uprn=record.uprn.trim();
             if(record.source_note)p.sourceNote=record.source_note.trim();
+            if(record.note)p.note=record.note.trim();
+            if(record.letting_agent)p.lettingAgent=record.letting_agent.trim();
             if(record.verification_date)p.verificationDate=record.verification_date.trim();
             if(record.verified)p.verified=/^(true|yes|1)$/i.test(record.verified.trim());
             for(const [column,property] of [

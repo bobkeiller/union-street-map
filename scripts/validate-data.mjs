@@ -7,12 +7,15 @@ const csvPath = resolve(projectRoot, 'data/union-street-units.csv');
 const expectedHeaders = [
   'unit_id', 'parent_building_id', 'osm_id', 'address', 'occupant', 'status',
   'rateable_value', 'area_sq_ft', 'annual_rates', 'annual_rent',
-  'arr_per_sq_ft', 'uprn', 'verified', 'verification_date', 'source_note'
+  'arr_per_sq_ft', 'uprn', 'verified', 'verification_date', 'source_note', 'note',
+  'letting_agent'
 ];
 const statuses = new Set([
   'occupied', 'filled', 'occupied-to-let', 'available', 'not-on-market',
   'being-occupied'
 ]);
+const vacantStatuses = new Set(['available', 'not-on-market', 'being-occupied']);
+const marketedStatuses = new Set([...vacantStatuses, 'occupied-to-let']);
 const numericFields = [
   'rateable_value', 'area_sq_ft', 'annual_rates', 'annual_rent', 'arr_per_sq_ft'
 ];
@@ -75,6 +78,12 @@ for (const [offset, row] of records.entries()) {
   else ids.add(record.unit_id);
   if (!record.status) errors.push(`Line ${line}: status is required.`);
   else if (!statuses.has(record.status)) errors.push(`Line ${line}: invalid status "${record.status}".`);
+  if (record.note && !vacantStatuses.has(record.status)) {
+    errors.push(`Line ${line}: note is only allowed for a vacant property.`);
+  }
+  if (record.letting_agent && !marketedStatuses.has(record.status)) {
+    errors.push(`Line ${line}: letting_agent is only allowed for a vacant or occupied-to-let property.`);
+  }
   if (record.verified && !/^(true|false)$/i.test(record.verified)) {
     errors.push(`Line ${line}: verified must be TRUE or FALSE.`);
   }
