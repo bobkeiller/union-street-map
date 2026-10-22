@@ -247,13 +247,15 @@
         }else{
           const occupiedNow=countFor('all-occupied');
           const vacantNow=countFor('all-vacant');
+          const availableThen=48;
+          const availableNow=totals.available||0;
           const closures=countedUnits.filter(feature=>feature.properties.closure).length;
           const filled=totals.filled||0;
           const netChange=filled-closures;
           const occupiedThen=occupiedNow-netChange;
           const vacantThen=vacantNow+netChange;
           const percentage=value=>`${(value/countedUnits.length*100).toFixed(1)}%`;
-          details.innerHTML=`<button class="close" type="button" aria-label="Close project progress">×</button><h2>Project Progress</h2><p class="progress-period">Since March 2023:</p><table class="progress-table"><thead><tr><th scope="col"></th><th scope="col">Then</th><th scope="col">Now</th></tr></thead><tbody><tr><th scope="row">Occupied</th><td>${occupiedThen} (${percentage(occupiedThen)})</td><td>${occupiedNow} (${percentage(occupiedNow)})</td></tr><tr><th scope="row">Vacant</th><td>${vacantThen} (${percentage(vacantThen)})</td><td>${vacantNow} (${percentage(vacantNow)})</td></tr></tbody></table><dl class="property-fields progress-metrics"><dt>Closures</dt><dd>${closures}</dd><dt>Filled</dt><dd>${filled}</dd></dl>`;
+          details.innerHTML=`<button class="close" type="button" aria-label="Close project progress">×</button><h2>Project Progress</h2><p class="progress-period">Since March 2023:</p><table class="progress-table"><thead><tr><th scope="col"></th><th scope="col">Then</th><th scope="col">Now</th></tr></thead><tbody><tr><th scope="row">Occupied</th><td>${occupiedThen} (${percentage(occupiedThen)})</td><td>${occupiedNow} (${percentage(occupiedNow)})</td></tr><tr><th scope="row">Vacant</th><td>${vacantThen} (${percentage(vacantThen)})</td><td>${vacantNow} (${percentage(vacantNow)})</td></tr><tr><th scope="row">Vacant: To Let</th><td>${availableThen}</td><td>${availableNow}</td></tr></tbody></table><dl class="property-fields progress-metrics"><dt>Closures</dt><dd>${closures}</dd><dt>Filled</dt><dd>${filled}</dd></dl>`;
         }
         details.dataset.panel='progress';
         details.hidden=false;
