@@ -28,6 +28,7 @@ osm-way-313943986,,way/313943986,31 Union Street,British Heart Foundation,occupi
 osm-way-314142354,,way/314142354,32 Castle Street,Carlton Bar,occupied,13750,,,,,,TRUE,,Local occupancy check,,,no
 osm-way-313943988,,way/313943988,33 Union Street,Phone Fix,occupied,10000,,,,,,TRUE,,Local occupancy check,,,no
 osm-way-314142349,,way/314142349,34 Castle Street,Vacant,not-on-market,11000,,,,,,TRUE,,Was Vegan Bakery,Was Vegan Bay Bakery,,no
+building-314142349-unit-35,osm-way-314142349,,35 Castle Street,Aberdeen in Colour Cafe,occupied,,,,,,,TRUE,,Occupied unit confirmed locally; internal dividing line is provisional,,,no
 building-314142350-unit-36,osm-way-314142350,node/3201606789,36 Castle Street,VSA,occupied,,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
 osm-way-313943989,,way/313943989,37 Union Street,Premier Food Store,occupied,23500,,,,,,TRUE,,Local occupancy check,,,no
 building-314142350-unit-38,osm-way-314142350,node/3201606789,38 Castle Street,VSA,occupied,103000,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no

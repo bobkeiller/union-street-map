@@ -180,13 +180,14 @@ window.UNION_STREET_CENTRAL_ADDRESSES = {
     ]
   },
   "osm-way-314142349": {
-    displayAddress: "34 Castle Street",
-    buildingName: "Vacant (Was Vegan Bakery)",
+    displayAddress: "34–35 Castle Street",
+    buildingName: "",
     source: "Local occupancy check",
     verified: true,
     status: "available",
     units: [
-      { recordId: "east-castle-034", name: "Vacant (Was Vegan Bakery)", address: "34 Castle Street", uprn: "" }
+      { recordId: "east-castle-034", name: "Vacant (Was Vegan Bakery)", address: "34 Castle Street", uprn: "" },
+      { recordId: "east-castle-035", name: "Aberdeen in Colour Cafe", address: "35 Castle Street", uprn: "" }
     ]
   },
   "osm-way-314142350": {

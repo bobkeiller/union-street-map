@@ -241,6 +241,46 @@ window.UNION_STREET_CENTRAL_FRONTAGES.features.push(
   )
 );
 
+/*
+ * Two ground-floor units within OSM way 314142349 (34–35 Castle Street).
+ * No. 35 is the narrow western unit, occupying approximately one-third of
+ * the building envelope. The internal dividing line is provisional.
+ */
+window.UNION_STREET_CENTRAL_FRONTAGES.features.push(
+  buildingUnit(
+    "osm-way-314142349",
+    "osm-way-314142349",
+    "Vacant (Was Vegan Bakery)",
+    "34 Castle Street",
+    "available",
+    [
+      [-2.0922325831,57.1481354647],
+      [-2.0921323,57.1481647],
+      [-2.0920514,57.1480831],
+      [-2.0919551,57.1479851],
+      [-2.0920549175,57.147956125],
+      [-2.0922325831,57.1481354647]
+    ],
+    "Vacancy and address confirmed locally; larger eastern unit within the 34–35 Castle Street envelope"
+  ),
+  buildingUnit(
+    "building-314142349-unit-35",
+    "osm-way-314142349",
+    "Aberdeen in Colour Cafe",
+    "35 Castle Street",
+    "occupied",
+    [
+      [-2.0922822,57.148121],
+      [-2.0922325831,57.1481354647],
+      [-2.0920549175,57.147956125],
+      [-2.0921053,57.1479415],
+      [-2.0921264,57.1479628],
+      [-2.0922822,57.148121]
+    ],
+    "Occupied unit confirmed locally; narrow western unit occupying approximately one-third of the parent building envelope"
+  )
+);
+
 /* Two retail units within OSM way 314020857 (39–45 Union Street). */
 window.UNION_STREET_CENTRAL_FRONTAGES.features.push(
   buildingUnit("building-314020857-unit-39", "osm-way-314020857", "Annie Mo’s", "39 Union Street", "occupied", [[-2.0955347,57.1471013],[-2.0957086,57.1472841],[-2.0958392,57.1472471],[-2.0955645805,57.1469619522],[-2.0954364,57.1469976],[-2.0955347,57.1471013]], "Occupant and address confirmed locally; internal dividing line is provisional"),
