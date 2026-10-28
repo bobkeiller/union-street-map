@@ -8,7 +8,7 @@ const expectedHeaders = [
   'unit_id', 'parent_building_id', 'osm_id', 'address', 'occupant', 'status',
   'rateable_value', 'area_sq_ft', 'annual_rates', 'annual_rent',
   'arr_per_sq_ft', 'uprn', 'verified', 'verification_date', 'source_note', 'note',
-  'letting_agent', 'closure'
+  'letting_agent', 'closure', 'letting_agent_url'
 ];
 const statuses = new Set([
   'occupied', 'filled', 'occupied-to-let', 'available', 'not-on-market',
@@ -68,11 +68,11 @@ const records = rows.slice(1).filter(row => row.some(value => value.trim() !== '
 const ids = new Set();
 for (const [offset, row] of records.entries()) {
   const line = offset + 2;
-  if (row.length !== expectedHeaders.length) {
-    errors.push(`Line ${line}: expected ${expectedHeaders.length} columns, found ${row.length}.`);
+  if (![expectedHeaders.length - 1, expectedHeaders.length].includes(row.length)) {
+    errors.push(`Line ${line}: expected ${expectedHeaders.length - 1} or ${expectedHeaders.length} columns, found ${row.length}.`);
     continue;
   }
-  const record = Object.fromEntries(expectedHeaders.map((header, index) => [header, row[index].trim()]));
+  const record = Object.fromEntries(expectedHeaders.map((header, index) => [header, (row[index] ?? '').trim()]));
   if (!record.unit_id) errors.push(`Line ${line}: unit_id is required.`);
   else if (ids.has(record.unit_id)) errors.push(`Line ${line}: duplicate unit_id "${record.unit_id}".`);
   else ids.add(record.unit_id);
@@ -83,6 +83,17 @@ for (const [offset, row] of records.entries()) {
   }
   if (record.letting_agent && !marketedStatuses.has(record.status)) {
     errors.push(`Line ${line}: letting_agent is only allowed for a vacant or occupied-to-let property.`);
+  }
+  if (record.letting_agent_url) {
+    if (!marketedStatuses.has(record.status)) {
+      errors.push(`Line ${line}: letting_agent_url is only allowed for a vacant or occupied-to-let property.`);
+    }
+    try {
+      const url = new URL(record.letting_agent_url);
+      if (!['http:', 'https:'].includes(url.protocol)) throw new Error('Unsupported protocol');
+    } catch {
+      errors.push(`Line ${line}: letting_agent_url must be a valid http or https URL.`);
+    }
   }
   if (!/^(yes|no)$/i.test(record.closure)) {
     errors.push(`Line ${line}: closure must be yes or no.`);

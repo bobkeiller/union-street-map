@@ -41,6 +41,10 @@
     .not-recorded{color:#7a8580;font-weight:500!important;font-style:italic}
     .property-note{margin:2px 0 0!important;padding:11px 12px;border-left:4px solid var(--available);border-radius:6px;background:#f8f3df;color:var(--ink)!important}
     .property-note strong{display:block;margin-bottom:3px}
+    .property-listing{margin:0 0 14px!important}
+    .property-listing a{display:inline-block;padding:8px 11px;border-radius:8px;background:var(--accent);color:#fff;font-size:.82rem;font-weight:750;text-decoration:none}
+    .property-listing a:hover{text-decoration:underline}
+    .property-listing a:focus-visible{outline:3px solid #e6bd52;outline-offset:2px}
     .progress-period{margin:0 0 12px!important;color:var(--ink)!important;font-weight:700}
     .progress-table{width:100%;border-collapse:collapse;font-size:.86rem}
     .progress-table th,.progress-table td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right}
@@ -402,8 +406,10 @@
           ['AR&R / sq ft',propertyValue(p,['arrPerSqFt','arr_per_sq_ft','arrSqFt'],'perSqFt')],
           ['Letting Agent',propertyValue(p,['lettingAgent','letting_agent'])]
         ]):'';
+        const listingUrl=safeUrl(p.lettingAgentUrl||p.letting_agent_url);
+        const listingHtml=marketed&&listingUrl?`<p class="property-listing"><a href="${escapeHtml(listingUrl)}" target="_blank" rel="noopener noreferrer">View property listing</a></p>`:'';
         const noteHtml=vacant&&p.note?`<p class="property-note"><strong>Note:</strong>${escapeHtml(p.note)}</p>`:'';
-        details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}${noteHtml}`;
+        details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}${listingHtml}${noteHtml}`;
         details.dataset.panel='property';
         details.hidden=false;
         details.querySelector('.close').addEventListener('click',()=>clearSelection(true));
@@ -485,6 +491,7 @@
             if(record.source_note)p.sourceNote=record.source_note.trim();
             if(record.note)p.note=record.note.trim();
             if(record.letting_agent)p.lettingAgent=record.letting_agent.trim();
+            if(record.letting_agent_url)p.lettingAgentUrl=record.letting_agent_url.trim();
             if(record.closure)p.closure=record.closure.trim().toLowerCase()==='yes';
             if(record.verification_date)p.verificationDate=record.verification_date.trim();
             if(record.verified)p.verified=/^(true|yes|1)$/i.test(record.verified.trim());

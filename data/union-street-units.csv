@@ -1,4 +1,4 @@
-﻿unit_id,parent_building_id,osm_id,address,occupant,status,rateable_value,area_sq_ft,annual_rates,annual_rent,arr_per_sq_ft,uprn,verified,verification_date,source_note,note,letting_agent,closure
+﻿unit_id,parent_building_id,osm_id,address,occupant,status,rateable_value,area_sq_ft,annual_rates,annual_rent,arr_per_sq_ft,uprn,verified,verification_date,source_note,note,letting_agent,closure,letting_agent_url
 osm-way-1053169095,,way/1053169095,133-141 Union Street,Nationwide,occupied,85000,,,,,,FALSE,,OpenStreetMap snapshot · 18 September 2026,,,no
 osm-way-316663039,,way/316663039,1 Union Terrace,Chaophrya,occupied,91000,,,,,,FALSE,,OpenStreetMap west extension snapshot · 18 September 2026,,,no
 osm-way-316663042,,way/316663042,148 Union Street,Vacant,available,21250,2263,10221,25000,15.56,,FALSE,,Was Cleavin Barber,Was Cleavin' Barber,Shepherd,yes
@@ -47,7 +47,7 @@ osm-way-314020851,,way/314020851,49 Union Street,Fone Spot,occupied,20750,,,,,,T
 building-636141916-unit-50,osm-way-636141916,node/11179531183,50 Union Street,Ladbrokes,occupied,23500,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
 building-314020864-unit-51,osm-way-314020864,node/9180783770,51 Union Street,VPZ,occupied,17250,,,,,,TRUE,,Occupant and address confirmed locally; internal dividing line is provisional,,,no
 osm-way-314142355,,way/314142355,52 Castlegate,Old Blackfriars,occupied,50000,,,,,,TRUE,,Local occupancy check,,,no
-osm-way-636141922,,way/636141922,52–54 Union Street,Vacant,available,50000,4661,24050,75000,21.25,,TRUE,,Was Halifax,Was Halifax Bank,CBRE,yes
+osm-way-636141922,,way/636141922,52–54 Union Street,Vacant,available,50000,4661,24050,75000,21.25,,TRUE,,Was Halifax,Was Halifax Bank,CBRE,yes,https://www.cbre.co.uk/property-search/retail-space/listings/details/GB-Plus-510170/52-54-union-street-aberdeen-aberdeen-city-ab10-1wr
 building-314020864-unit-53,osm-way-314020864,,53 Union Street,Mister C’s,filled,19750,,,,,,TRUE,,Occupant and address confirmed locally; filled since the project baseline,,,no
 osm-way-314021127,,way/314021127,55 Union Street,Greggs,occupied,24000,,,,,,TRUE,,Local occupancy check,,,no
 osm-way-404609507,,way/404609507,55–56 Castle Street,The Tilted Wig,occupied,14000,,,,,,TRUE,,Local occupancy check,,,no
@@ -140,7 +140,7 @@ osm-way-723877510,,way/723877510,254 Union Street,Vovem,occupied,78000,,,,,,TRUE
 osm-way-1214395884,,way/1214395884,255 Union Street,Vaping 101,occupied,33750,,,,,,TRUE,,Local occupancy check,,,no
 osm-way-723877509,,way/723877509,256 Union Street,Signature 2,occupied,26000,,,,,,TRUE,,Local occupancy check,,,no
 osm-way-1214395887,,way/1214395887,257–259 Union Street,Amarone,occupied,76000,,,,,,TRUE,,Local occupancy check,,,no
-building-1214395888-unit-261,osm-way-1214395888,node/9106209428,261 Union Street,Vacant,available,32500,4138,15633,40000,13.44,,TRUE,,Was SK:N,Was SK:N Clinic,Graham & Sibbald,yes
+building-1214395888-unit-261,osm-way-1214395888,node/9106209428,261 Union Street,Vacant,available,32500,4138,15633,40000,13.44,,TRUE,,Was SK:N,Was SK:N Clinic,Graham & Sibbald,yes,https://g-s.co.uk/properties/property/53876/
 osm-way-723877508,,way/723877508,262 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,,no
 building-1214395888-unit-263,osm-way-1214395888,node/11251612995,263 Union Street,Gidi Grill,occupied,48250,,,,,,TRUE,,Occupant and address confirmed locally; dividing edge aligned with the neighbouring unit boundaries,,,yes
 osm-way-723877507,,way/723877507,264 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,,no
