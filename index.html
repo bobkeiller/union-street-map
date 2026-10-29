@@ -18,11 +18,12 @@
     .ous-logo-link{display:inline-flex;flex:0 0 auto;border-radius:8px}
     .ous-logo-link:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
     .ous-logo-link img{display:block;width:auto;height:54px;object-fit:contain}
-    .status-tools{display:grid;grid-template-columns:112px minmax(0,1fr) auto;align-items:center;gap:8px;margin-top:10px;max-width:760px}
+    .status-tools{display:grid;grid-template-columns:112px minmax(0,1fr) auto auto;align-items:center;gap:8px;margin-top:10px;max-width:900px}
     .status-tools label{font-size:.82rem;font-weight:700}
     .status-tools select{width:100%;min-width:0;padding:7px 30px 7px 9px;border:1px solid #b8c5bd;border-radius:8px;background:#f5f7f5;color:var(--ink);font:inherit}
-    .progress-button{min-height:35px;padding:7px 11px;border:1px solid var(--accent);border-radius:8px;background:var(--accent);color:#fff;font:inherit;font-size:.82rem;font-weight:700;cursor:pointer}
-    .progress-button:focus-visible{outline:3px solid #e6bd52;outline-offset:2px}
+    .progress-button,.help-button{min-height:35px;padding:7px 11px;border:1px solid var(--accent);border-radius:8px;background:var(--accent);color:#fff;font:inherit;font-size:.82rem;font-weight:700;cursor:pointer}
+    .help-button{background:#fff;color:var(--accent)}
+    .progress-button:focus-visible,.help-button:focus-visible{outline:3px solid #e6bd52;outline-offset:2px}
     .status-totals{grid-column:1/-1;margin:0!important;font-size:.76rem!important}
     .layout{position:relative;min-height:0}
     #map{position:absolute;inset:0;background:#dfe6e1}
@@ -51,13 +52,19 @@
     .progress-table th:first-child{text-align:left}
     .progress-table thead th{color:var(--muted);font-size:.78rem;text-transform:uppercase}
     .progress-metrics{margin-top:12px}
+    .help-list{margin:9px 0 13px;padding-left:20px;font-size:.86rem;line-height:1.45}
+    .help-list li{margin:5px 0}
+    .help-free{margin:0 0 14px!important;color:var(--ink)!important;font-weight:800}
+    .help-contact{display:grid;gap:8px;margin-top:12px;padding-top:12px;border-top:1px solid var(--line);font-size:.84rem}
+    .help-contact a{color:var(--accent);font-weight:750;overflow-wrap:anywhere}
     .osm-records{display:grid;gap:8px;margin:8px 0}
     .osm-record{padding:9px 10px;background:#f1f5f2;border-left:4px solid #6f9a7e;border-radius:6px}
     .osm-record strong,.osm-record span{display:block}
     .osm-record span{margin-top:2px;color:var(--muted);font-size:.8rem}
     .excluded{margin:9px 0;color:var(--muted);font-size:.8rem}
     .excluded summary{cursor:pointer;font-weight:700}
-    .close{position:absolute;right:9px;top:8px;width:32px;height:32px;border:0;border-radius:50%;background:#eef2ef;color:#273a31;font-size:1.2rem;cursor:pointer}
+    .close{position:sticky;z-index:2;top:0;float:right;width:36px;height:36px;margin:-4px -4px 2px 8px;border:1px solid #d7dfda;border-radius:50%;background:#eef2ef;color:#273a31;font-size:1.25rem;cursor:pointer;box-shadow:0 2px 8px #17221d1f}
+    .close:focus-visible{outline:3px solid #e6bd52;outline-offset:2px}
     .legend{position:absolute;z-index:4;top:12px;left:12px;padding:10px 11px;background:#fffffff2;border:1px solid #cbd5cf;border-radius:11px;box-shadow:0 4px 18px #17221d1f;font-size:.75rem}
     .legend strong{display:block;margin-bottom:6px;font-size:.8rem}
     .legend span{display:flex;align-items:center;gap:6px;margin:4px 0}
@@ -67,7 +74,7 @@
     .map-error{position:absolute;z-index:6;inset:20px;display:none;place-items:center;padding:24px;background:#fff;border:1px solid var(--line);border-radius:14px;text-align:center}
     .maplibregl-ctrl-attrib{font-size:10px}
     @media(min-width:760px){.topbar{padding:15px 22px}.panel{left:auto;right:18px;bottom:18px;width:340px;max-height:58%;padding:17px}.legend{top:18px;left:18px}.maplibregl-ctrl-bottom-right{right:0;bottom:0}}
-    @media(max-width:600px){.status-tools{grid-template-columns:112px minmax(0,1fr)}.progress-button{grid-column:2}}
+    @media(max-width:600px){.status-tools{grid-template-columns:1fr 1fr}.status-tools label{grid-column:1}.status-tools select{grid-column:2}.progress-button{grid-column:1}.help-button{grid-column:2}}
     @media(max-width:480px){.ous-logo-link img{height:42px}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
   </style>
@@ -93,7 +100,8 @@
         <option value="not-on-market">Vacant: Not on Market</option>
         <option value="being-occupied">Vacant: Being Filled</option>
       </select>
-      <button class="progress-button" id="project-progress" type="button" aria-expanded="false">Project Progress</button>
+      <button class="progress-button" id="project-progress" type="button" aria-controls="details" aria-expanded="false">Project Progress</button>
+      <button class="help-button" id="need-help" type="button" aria-controls="details" aria-expanded="false">Need Help?</button>
       <p class="status-totals" id="status-totals" aria-live="polite"></p>
     </div>
   </header>
@@ -127,6 +135,7 @@
       const statusFilter=document.getElementById('status-filter');
       const statusTotals=document.getElementById('status-totals');
       const progressButton=document.getElementById('project-progress');
+      const helpButton=document.getElementById('need-help');
       const addressRecords=globalThis.UNION_STREET_CENTRAL_ADDRESSES||{};
       const buildingOverrides=globalThis.UNION_STREET_CENTRAL_BUILDING_OVERRIDES||{};
       const osmFeatureRecords={...(globalThis.UNION_STREET_CENTRAL_OSM_FEATURES||{}),...(globalThis.UNION_STREET_EAST_OSM_FEATURES||{}),...(globalThis.UNION_STREET_WEST_OSM_FEATURES||{})};
@@ -234,6 +243,7 @@
       const countFor=value=>statusGroups[value]?statusGroups[value].reduce((sum,status)=>sum+(totals[status]||0),0):totals[value]||0;
       let selectedUnitId='';
       let selectedUnitKind='';
+      let panelTrigger=null;
       [...statusFilter.options].forEach(option=>{option.textContent=option.value==='all'?`All statuses (${countedUnits.length})`:`${groupLabels[option.value]||labels[option.value]} (${countFor(option.value)})`});
       function renderTotals(){
         const selected=statusFilter.value;
@@ -246,6 +256,7 @@
           return;
         }
         clearSelection(false);
+        panelTrigger=progressButton;
         if(!globalThis.UNION_STREET_CSV_LOAD?.loaded){
           details.innerHTML='<button class="close" type="button" aria-label="Close project progress">×</button><h2>Project Progress</h2><p>Progress figures are unavailable because the property register could not be loaded.</p>';
         }else{
@@ -263,10 +274,26 @@
         }
         details.dataset.panel='progress';
         details.hidden=false;
+        helpButton.setAttribute('aria-expanded','false');
         progressButton.setAttribute('aria-expanded','true');
-        details.querySelector('.close').addEventListener('click',()=>clearSelection(true));
+        details.querySelector('.close').addEventListener('click',dismissDetails);
       }
       progressButton.addEventListener('click',renderProjectProgress);
+      function renderHelp(){
+        if(details.dataset.panel==='help'&&!details.hidden){
+          clearSelection(true);
+          return;
+        }
+        clearSelection(false);
+        panelTrigger=helpButton;
+        details.innerHTML=`<button class="close" type="button" aria-label="Close help panel">×</button><h2>Need Help?</h2><p>What do you need? We can:</p><ul class="help-list"><li>Help you find the right unit.</li><li>Help with your business plan.</li><li>Help you understand available support and incentives.</li><li>Help to connect you with the right people.</li><li>Help to promote your business.</li></ul><p class="help-free">(All for free!)</p><div class="help-contact"><span>Drop us a note: <a href="mailto:info@ourunionstreet.com">info@ourunionstreet.com</a></span><span>Take a look at our website: <a href="https://www.ourunionstreet.com/" target="_blank" rel="noopener noreferrer">www.ourunionstreet.com</a></span></div>`;
+        details.dataset.panel='help';
+        details.hidden=false;
+        progressButton.setAttribute('aria-expanded','false');
+        helpButton.setAttribute('aria-expanded','true');
+        details.querySelector('.close').addEventListener('click',dismissDetails);
+      }
+      helpButton.addEventListener('click',renderHelp);
       const map=new maplibregl.Map({container:'map',style:'https://tiles.openfreemap.org/styles/liberty',center:[-2.0987,57.14655],zoom:17.35,bearing:-74,pitch:0,attributionControl:false});
       globalThis.unionStreetMap=map;
       map.addControl(new maplibregl.NavigationControl({showCompass:false}),'bottom-left');
@@ -393,6 +420,9 @@
         renderPropertyCard({...record,...linkedUnit,...p});
       }
       function renderPropertyCard(p){
+        panelTrigger=null;
+        progressButton.setAttribute('aria-expanded','false');
+        helpButton.setAttribute('aria-expanded','false');
         const vacant=['available','not-on-market','being-occupied'].includes(p.status);
         const marketed=vacant||p.status==='occupied-to-let';
         const title=vacant?'Vacant':p.name||p.buildingName||'Occupant not recorded';
@@ -412,7 +442,7 @@
         details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}${listingHtml}${noteHtml}`;
         details.dataset.panel='property';
         details.hidden=false;
-        details.querySelector('.close').addEventListener('click',()=>clearSelection(true));
+        details.querySelector('.close').addEventListener('click',dismissDetails);
       }
       function selectUnit(unitId,kind){
         selectedUnitId=unitId||'';
@@ -427,8 +457,20 @@
         if(map.getLayer('selected-building-outline'))map.setFilter('selected-building-outline',['==',['get','buildingId'],'']);
         if(map.getLayer('selected-frontage-outline'))map.setFilter('selected-frontage-outline',['==',['get','frontageId'],'']);
         updateSelected3dEdges();
-        if(hideDetails){details.hidden=true;details.dataset.panel='';progressButton.setAttribute('aria-expanded','false')}
+        if(hideDetails){details.hidden=true;details.dataset.panel='';progressButton.setAttribute('aria-expanded','false');helpButton.setAttribute('aria-expanded','false');panelTrigger=null}
       }
+      function dismissDetails(){
+        const trigger=panelTrigger;
+        clearSelection(true);
+        panelTrigger=null;
+        if(trigger)trigger.focus();
+      }
+      document.addEventListener('keydown',event=>{
+        if(event.key==='Escape'&&!details.hidden){
+          event.preventDefault();
+          dismissDetails();
+        }
+      });
       function updateSelected3dEdges(){
         if(!map.getLayer('height-pilot-edges'))return;
         const edgeUnitId=['case',['!=',['get','frontageId'],''],['get','frontageId'],['get','buildingId']];
@@ -452,6 +494,17 @@
         if(!clickable3dLayers.length)return;
         const feature=map.queryRenderedFeatures(event.point,{layers:clickable3dLayers})[0];
         if(feature)showBlockDetails({features:[feature]});
+      });
+      map.on('click',event=>{
+        const candidateLayers=(map.getPitch()>=15
+          ?['height-pilot-edges','height-pilot-units']
+          :['retail-frontage','building-fill']
+        ).filter(layerId=>map.getLayer(layerId));
+        const clickedFeature=candidateLayers.length&&map.queryRenderedFeatures(event.point,{layers:candidateLayers})[0];
+        if(!clickedFeature&&!details.hidden){
+          clearSelection(true);
+          panelTrigger=null;
+        }
       });
       map.on('mouseenter','building-fill',()=>{map.getCanvas().style.cursor='pointer'});
       map.on('mouseleave','building-fill',()=>{map.getCanvas().style.cursor=''});
