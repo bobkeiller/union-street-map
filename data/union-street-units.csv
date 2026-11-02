@@ -142,7 +142,7 @@ osm-way-723877509,,way/723877509,256 Union Street,Signature 2,occupied,26000,,,,
 osm-way-1214395887,,way/1214395887,257–259 Union Street,Amarone,occupied,76000,,,,,,TRUE,,Local occupancy check,,,no,
 building-1214395888-unit-261,osm-way-1214395888,node/9106209428,261 Union Street,Vacant,available,32500,4138,15633,40000,13.44,,TRUE,,Was SK:N,Was SK:N Clinic,Graham & Sibbald,yes,https://g-s.co.uk/properties/property/53876/
 osm-way-723877508,,way/723877508,262 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,,no,
-building-1214395888-unit-263,osm-way-1214395888,node/11251612995,263 Union Street,Gidi Grill,available,48250,5785,24029,60000,14.52,,TRUE,,Occupant and address confirmed locally; dividing edge aligned with the neighbouring unit boundaries,"Was GIDI Grill, Potential Seafood Restaurant",,yes,
+building-1214395888-unit-263,osm-way-1214395888,node/11251612995,263 Union Street,Gidi Grill,available,48250,5785,24029,60000,14.52,,TRUE,,Occupant and address confirmed locally; dividing edge aligned with the neighbouring unit boundaries,"Was GIDI Grill, Potential Seafood Restaurant",Shepherd,yes,https://www.shepherd.co.uk/property/details/9834/263-union-street-aberdeen-aberdeenshire-restaurant
 osm-way-723877507,,way/723877507,264 Union Street,Vacant,being-occupied,,,,,,,TRUE,,Local occupancy check,,,no,
 osm-way-1214395889,,way/1214395889,267 Union Street,Trailfinders,occupied,24000,,,,,,TRUE,,Local occupancy check,,,no,
 building-1214395890-unit-269,osm-way-1214395890,node/9106209425,269 Union Street,So NYC Bagels & Brew,occupied,42750,,,,,,TRUE,,Occupant and address confirmed locally; footprint mirrors Trailfinders across their shared boundary,,,no,
