@@ -1,4 +1,4 @@
-import { readFile } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
@@ -8,7 +8,8 @@ const expectedHeaders = [
   'unit_id', 'parent_building_id', 'osm_id', 'address', 'occupant', 'status',
   'rateable_value', 'area_sq_ft', 'annual_rates', 'annual_rent',
   'arr_per_sq_ft', 'uprn', 'verified', 'verification_date', 'source_note', 'note',
-  'letting_agent', 'closure', 'letting_agent_url'
+  'letting_agent', 'closure', 'letting_agent_url', 'property_image',
+  'property_image_alt', 'property_image_date'
 ];
 const statuses = new Set([
   'occupied', 'filled', 'occupied-to-let', 'available', 'not-on-market',
@@ -68,8 +69,9 @@ const records = rows.slice(1).filter(row => row.some(value => value.trim() !== '
 const ids = new Set();
 for (const [offset, row] of records.entries()) {
   const line = offset + 2;
-  if (![expectedHeaders.length - 1, expectedHeaders.length].includes(row.length)) {
-    errors.push(`Line ${line}: expected ${expectedHeaders.length - 1} or ${expectedHeaders.length} columns, found ${row.length}.`);
+  const minimumColumns = expectedHeaders.indexOf('letting_agent_url');
+  if (row.length < minimumColumns || row.length > expectedHeaders.length) {
+    errors.push(`Line ${line}: expected between ${minimumColumns} and ${expectedHeaders.length} columns, found ${row.length}.`);
     continue;
   }
   const record = Object.fromEntries(expectedHeaders.map((header, index) => [header, (row[index] ?? '').trim()]));
@@ -93,6 +95,28 @@ for (const [offset, row] of records.entries()) {
       if (!['http:', 'https:'].includes(url.protocol)) throw new Error('Unsupported protocol');
     } catch {
       errors.push(`Line ${line}: letting_agent_url must be a valid http or https URL.`);
+    }
+  }
+  const imageFields = ['property_image', 'property_image_alt', 'property_image_date'];
+  if (imageFields.some(field => record[field]) && !record.property_image) {
+    errors.push(`Line ${line}: property_image is required when photograph details are supplied.`);
+  }
+  if (record.property_image) {
+    if (!vacantStatuses.has(record.status)) {
+      errors.push(`Line ${line}: property_image is only allowed for a vacant property.`);
+    }
+    if (!/^images\/vacant-units\/[a-z0-9][a-z0-9._-]*\.(?:png|jpe?g|webp)$/i.test(record.property_image)) {
+      errors.push(`Line ${line}: property_image must be a PNG, JPEG or WebP file in images/vacant-units/.`);
+    } else {
+      try {
+        await access(resolve(projectRoot, record.property_image));
+      } catch {
+        errors.push(`Line ${line}: property_image file was not found: ${record.property_image}`);
+      }
+    }
+    if (!record.property_image_alt) errors.push(`Line ${line}: property_image_alt is required for accessibility.`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(record.property_image_date)) {
+      errors.push(`Line ${line}: property_image_date must use YYYY-MM-DD.`);
     }
   }
   if (!/^(yes|no)$/i.test(record.closure)) {

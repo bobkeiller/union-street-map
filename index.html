@@ -46,6 +46,9 @@
     .property-listing a{display:inline-block;padding:8px 11px;border-radius:8px;background:var(--accent);color:#fff;font-size:.82rem;font-weight:750;text-decoration:none}
     .property-listing a:hover{text-decoration:underline}
     .property-listing a:focus-visible{outline:3px solid #e6bd52;outline-offset:2px}
+    .property-photo{margin:0 0 14px}
+    .property-photo img{display:block;width:100%;height:auto;max-height:260px;object-fit:cover;border-radius:9px;background:#e7ece9}
+    .property-photo figcaption{margin-top:6px;color:var(--muted);font-size:.76rem;line-height:1.35}
     .progress-period{margin:0 0 12px!important;color:var(--ink)!important;font-weight:700}
     .progress-table{width:100%;border-collapse:collapse;font-size:.86rem}
     .progress-table th,.progress-table td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:right}
@@ -438,8 +441,13 @@
         ]):'';
         const listingUrl=safeUrl(p.lettingAgentUrl||p.letting_agent_url);
         const listingHtml=marketed&&listingUrl?`<p class="property-listing"><a href="${escapeHtml(listingUrl)}" target="_blank" rel="noopener noreferrer">View property listing</a></p>`:'';
+        const photoPath=safePropertyImage(p.propertyImage||p.property_image);
+        const photoDescription=p.propertyImageAlt||p.property_image_alt;
+        const photoDate=p.propertyImageDate||p.property_image_date;
+        const photoCaption=[photoDescription,formatPhotoDate(photoDate)].filter(Boolean).map(escapeHtml).join(' · ');
+        const photoHtml=vacant&&photoPath&&photoDescription?`<figure class="property-photo"><img src="${escapeHtml(photoPath)}" alt="${escapeHtml(photoDescription)}" loading="lazy">${photoCaption?`<figcaption>${photoCaption}</figcaption>`:''}</figure>`:'';
         const noteHtml=vacant&&p.note?`<p class="property-note"><strong>Note:</strong>${escapeHtml(p.note)}</p>`:'';
-        details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}${listingHtml}${noteHtml}`;
+        details.innerHTML=`<button class="close" type="button" aria-label="Close property details">×</button><h2>${escapeHtml(title)}</h2><p class="property-address">${escapeHtml(address)}</p><span class="status" style="background:${escapeHtml(colours[p.status]||'#e8eeea')}55">${escapeHtml(statusLabel)}</span>${photoHtml}${sectionHtml('Rateable Value',[['Value',rateableValue]])}${vacancyFields}${listingHtml}${noteHtml}`;
         details.dataset.panel='property';
         details.hidden=false;
         details.querySelector('.close').addEventListener('click',dismissDetails);
@@ -545,6 +553,9 @@
             if(record.note)p.note=record.note.trim();
             if(record.letting_agent)p.lettingAgent=record.letting_agent.trim();
             if(record.letting_agent_url)p.lettingAgentUrl=record.letting_agent_url.trim();
+            if(record.property_image)p.propertyImage=record.property_image.trim();
+            if(record.property_image_alt)p.propertyImageAlt=record.property_image_alt.trim();
+            if(record.property_image_date)p.propertyImageDate=record.property_image_date.trim();
             if(record.closure)p.closure=record.closure.trim().toLowerCase()==='yes';
             if(record.verification_date)p.verificationDate=record.verification_date.trim();
             if(record.verified)p.verified=/^(true|yes|1)$/i.test(record.verified.trim());
@@ -635,6 +646,16 @@
       }
       function friendlyCategory(value){return String(value||'').replaceAll('_',' ').replace(/^./,letter=>letter.toUpperCase())}
       function safeUrl(value){try{const url=new URL(value);return ['http:','https:'].includes(url.protocol)?url.href:''}catch{return ''}}
+      function safePropertyImage(value){
+        const path=String(value||'').trim();
+        return /^images\/vacant-units\/[a-z0-9][a-z0-9._-]*\.(?:png|jpe?g|webp)$/i.test(path)?path:'';
+      }
+      function formatPhotoDate(value){
+        const match=String(value||'').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+        if(!match)return '';
+        const date=new Date(`${value}T12:00:00Z`);
+        return Number.isNaN(date.getTime())?'':`Photographed ${new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'}).format(date)}`;
+      }
       function escapeHtml(value){return String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]))}
       renderTotals();
     })();
